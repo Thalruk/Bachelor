@@ -115,7 +115,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6852223138160978622}
   - component: {fileID: 843504127908801770}
-  - component: {fileID: 6488513362710385083}
   m_Layer: 0
   m_Name: Waypoint
   m_TagString: Untagged
@@ -137,7 +136,7 @@ Transform:
   m_Children:
   - {fileID: 6494487042840261982}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &843504127908801770
 MonoBehaviour:
@@ -151,16 +150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b211cff689ea7fa4aaf79405f4d128cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  to: []
---- !u!114 &6488513362710385083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6798072535554590081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61dd5a650732037458f15de92fb6c85d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  waypoints: []
+  roads: []
+  road: {fileID: 3812409770003840063, guid: 0e3d941696bf5c646a0319fea11399db, type: 3}

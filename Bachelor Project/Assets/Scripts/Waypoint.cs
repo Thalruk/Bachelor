@@ -1,31 +1,31 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Splines;
 
 public class Waypoint : MonoBehaviour
 {
-    public List<Waypoint> to;
-    public Vector3 lineOffset = new Vector3(0, 5, 0);
+    public List<Waypoint> waypoints;
+    [SerializeField] List<GameObject> roads;
+
+    [SerializeField] GameObject road;
 
     private void Awake()
     {
-
+        waypoints = new List<Waypoint>();
+        roads = new List<GameObject>();
     }
 
-    private void OnDrawGizmos()
+    private void OnValidate()
     {
-        foreach (Waypoint waypoint in to)
+        Debug.Log("something changed");
+        foreach (GameObject road in roads)
         {
-            if (waypoint.to.Contains(this))
-            {
-                Gizmos.color = Color.red;
-            }
-            else
-            {
-                Gizmos.color = Color.magenta;
-            }
-            Gizmos.DrawLine(transform.position + lineOffset, waypoint.transform.position + lineOffset);
+            Spline spline = road.GetComponent<Spline>();
+            spline.SetKnot(0, new BezierKnot(gameObject.transform.position));
+            spline.SetKnot(1, new BezierKnot(waypoints[roads.IndexOf(road)].gameObject.transform.position));
         }
     }
+
 }
 
 
