@@ -1,18 +1,10 @@
 using UnityEngine;
-using UnityEngine.AI;
 
 public class Car : MonoBehaviour
 {
-    NavMeshAgent agent;
-    void Awake()
-    {
-        agent = GetComponent<NavMeshAgent>();
-    }
+    [SerializeField] Waypoint actualWaypoint;
 
-
-    public void MoveTo(Vector3 position)
+    private void Update()
     {
-        Debug.Log("MOVING");
-        agent.SetDestination(position);
     }
 }
