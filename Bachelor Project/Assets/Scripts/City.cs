@@ -3,14 +3,16 @@ using UnityEngine;
 using UnityEngine.Splines;
 
 [RequireComponent(typeof(SplineContainer))]
+[RequireComponent(typeof(SplineRoad))]
 public class City : MonoBehaviour
 {
     public static City Instance;
     public SplineContainer splineContainer;
+    public SplineRoad splineRoad;
     public List<Waypoint> waypoints;
 
     public GameObject carPrefab;
-
+    public bool showHelp = true;
 
     private void Awake()
     {
@@ -26,6 +28,14 @@ public class City : MonoBehaviour
         }
 
         UpdateRoadData();
+
+        if (!showHelp)
+        {
+            foreach (var waypoint in waypoints)
+            {
+
+            }
+        }
     }
 
     private void Update()
@@ -81,5 +91,6 @@ public class City : MonoBehaviour
         {
             splineContainer.RemoveSpline(road);
         }
+        splineRoad.DeleteMesh();
     }
 }

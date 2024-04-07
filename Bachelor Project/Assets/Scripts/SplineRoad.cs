@@ -1,23 +1,31 @@
 using System.Collections.Generic;
-using UnityEditor;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Splines;
 
 [ExecuteInEditMode]
-[RequireComponent(typeof(SplineSampler))]
 public class SplineRoad : MonoBehaviour
 {
     private List<Vector3> _vertsP1 = new();
     private List<Vector3> _vertsP2 = new();
+    Mesh mesh;
 
     [SerializeField] private int resolution;
     [SerializeField] private float _width;
 
-    [SerializeField] private SplineSampler _splineSampler;
     [SerializeField] private MeshFilter _meshFilter;
+    [SerializeField] private SplineContainer _splineContainer;
+
+
+    public int NumSplines;
+
+    float3 position;
+    float3 forward;
+    float3 upVector3;
 
     private void OnEnable()
     {
+        mesh = new Mesh();
         Spline.Changed += OnSplineChanged;
         Rebuild();
     }
@@ -32,13 +40,9 @@ public class SplineRoad : MonoBehaviour
         Rebuild();
     }
 
-    private void Update()
-    {
-        Rebuild();
-    }
-
     private void Rebuild()
     {
+        NumSplines = _splineContainer.Splines.Count;
         GetVerts();
         BuildMesh();
     }
@@ -52,32 +56,41 @@ public class SplineRoad : MonoBehaviour
         Vector3 p1;
         Vector3 p2;
 
-        for (int j = 0; j < _splineSampler.NumSplines; j++)
+        for (int j = 0; j < NumSplines; j++)
         {
             for (int i = 0; i < resolution; i++)
             {
                 float t = step * i;
-                _splineSampler.SampleSplineWidth(j, t, _width, out p1, out p2);
+                SampleSplineWidth(j, t, _width, out p1, out p2);
                 _vertsP1.Add(p1);
                 _vertsP2.Add(p2);
             }
-            _splineSampler.SampleSplineWidth(j, 1f, _width, out p1, out p2);
+            SampleSplineWidth(j, 1f, _width, out p1, out p2);
             _vertsP1.Add(p1);
             _vertsP2.Add(p2);
         }
     }
 
+    internal void SampleSplineWidth(int j, float t, float width, out Vector3 p1, out Vector3 p2)
+    {
+        _splineContainer.Evaluate(j, t, out position, out forward, out upVector3);
+
+        float3 right = Vector3.Cross(forward, upVector3).normalized;
+
+        p1 = position + (right * width);
+        p2 = position + (-right * width);
+    }
+
     private void BuildMesh()
     {
 
-        Mesh mesh = new Mesh();
         List<Vector3> verts = new List<Vector3>();
         List<int> tris = new List<int>();
         int offset = 0;
 
         int length = _vertsP2.Count;
 
-        for (int currentSplineIndex = 0; currentSplineIndex < _splineSampler.NumSplines; currentSplineIndex++)
+        for (int currentSplineIndex = 0; currentSplineIndex < NumSplines; currentSplineIndex++)
         {
             int splineOffset = resolution * currentSplineIndex;
             splineOffset += currentSplineIndex;
@@ -103,21 +116,16 @@ public class SplineRoad : MonoBehaviour
 
                 verts.AddRange(new List<Vector3> { p1, p2, p3, p4 });
                 tris.AddRange(new List<int> { t1, t2, t3, t4, t5, t6 });
+
             }
         }
+        mesh.SetVertices(verts);
+        mesh.SetTriangles(tris, 0);
         _meshFilter.mesh = mesh;
     }
 
-    private void OnDrawGizmos()
+    public void DeleteMesh()
     {
-        Handles.matrix = transform.localToWorldMatrix;
-        foreach (var p1 in _vertsP1)
-        {
-            Handles.SphereHandleCap(0, p1, Quaternion.identity, 0.5f, EventType.Repaint);
-        }
-        foreach (var p2 in _vertsP2)
-        {
-            Handles.SphereHandleCap(0, p2, Quaternion.identity, 0.5f, EventType.Repaint);
-        }
+        mesh.Clear();
     }
 }
