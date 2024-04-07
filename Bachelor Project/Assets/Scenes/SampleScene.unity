@@ -123,113 +123,39 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &160889093
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!114 &20366997 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+  m_PrefabInstance: {fileID: 1420065017}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 160889097}
-  - component: {fileID: 160889096}
-  - component: {fileID: 160889095}
-  - component: {fileID: 160889094}
-  m_Layer: 6
-  m_Name: Floor
-  m_TagString: Ground
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!64 &160889094
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160889093}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &160889095
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160889093}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: bc7eab4447776da4fa4ca52b46261e47, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &160889096
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160889093}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &160889097
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b211cff689ea7fa4aaf79405f4d128cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &20366999 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+  m_PrefabInstance: {fileID: 1420065017}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160889093}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &229634022
+--- !u!114 &78747834 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+  m_PrefabInstance: {fileID: 143128799}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b211cff689ea7fa4aaf79405f4d128cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &78747836 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+  m_PrefabInstance: {fileID: 143128799}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &129655814
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -247,7 +173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
       propertyPath: roads.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
       propertyPath: to.Array.data[0]
@@ -270,6 +196,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roads.Array.data[0].to
+      value: 
+      objectReference: {fileID: 1302028492}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
       objectReference: {fileID: 0}
@@ -277,13 +207,17 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[1]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6141115338576279855, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6488513362710385083, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
       propertyPath: debugInfo
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6798072535554590081, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
       propertyPath: m_Name
-      value: Waypoint (2)
+      value: Fourth
       objectReference: {fileID: 0}
     - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
       propertyPath: m_RootOrder
@@ -335,6 +269,230 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+--- !u!1001 &143128799
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1849777480}
+    m_Modifications:
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roadPrefab
+      value: 
+      objectReference: {fileID: 3812409770003840063, guid: 0e3d941696bf5c646a0319fea11399db, type: 3}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: to.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roads.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: to.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: to.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roads.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roads.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roads.Array.data[0].to
+      value: 
+      objectReference: {fileID: 1314064014}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6141115338576279855, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488513362710385083, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: debugInfo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798072535554590081, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_Name
+      value: Seventh
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6488513362710385083, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+--- !u!1001 &229634022
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1849777480}
+    m_Modifications:
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roadPrefab
+      value: 
+      objectReference: {fileID: 3812409770003840063, guid: 0e3d941696bf5c646a0319fea11399db, type: 3}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: to.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roads.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: to.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: to.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roads.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roads.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roads.Array.data[0].to
+      value: 
+      objectReference: {fileID: 231196566}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488513362710385083, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: debugInfo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798072535554590081, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_Name
+      value: Third
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6488513362710385083, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
 --- !u!114 &229634023 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
@@ -350,6 +508,22 @@ MonoBehaviour:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
   m_PrefabInstance: {fileID: 229634022}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &231196566 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+  m_PrefabInstance: {fileID: 129655814}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b211cff689ea7fa4aaf79405f4d128cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &231196568 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+  m_PrefabInstance: {fileID: 129655814}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &574686030 stripped
 MonoBehaviour:
@@ -456,6 +630,120 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1001 &811680571
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1849777480}
+    m_Modifications:
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roadPrefab
+      value: 
+      objectReference: {fileID: 3812409770003840063, guid: 0e3d941696bf5c646a0319fea11399db, type: 3}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: to.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roads.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: to.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: to.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roads.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roads.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roads.Array.data[0].to
+      value: 
+      objectReference: {fileID: 78747834}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6141115338576279855, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488513362710385083, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: debugInfo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798072535554590081, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_Name
+      value: Eigth
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 39.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6488513362710385083, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,6 +836,266 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1001 &1076872700
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1849777480}
+    m_Modifications:
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roadPrefab
+      value: 
+      objectReference: {fileID: 3812409770003840063, guid: 0e3d941696bf5c646a0319fea11399db, type: 3}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: to.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roads.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: to.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: to.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roads.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roads.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roads.Array.data[0].to
+      value: 
+      objectReference: {fileID: 20366997}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6141115338576279855, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488513362710385083, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: debugInfo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798072535554590081, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_Name
+      value: Fifth
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6488513362710385083, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+--- !u!114 &1302028492 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+  m_PrefabInstance: {fileID: 811680571}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b211cff689ea7fa4aaf79405f4d128cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1302028494 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+  m_PrefabInstance: {fileID: 811680571}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1314064014 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+  m_PrefabInstance: {fileID: 1076872700}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b211cff689ea7fa4aaf79405f4d128cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1314064016 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+  m_PrefabInstance: {fileID: 1076872700}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1420065017
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1849777480}
+    m_Modifications:
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roadPrefab
+      value: 
+      objectReference: {fileID: 3812409770003840063, guid: 0e3d941696bf5c646a0319fea11399db, type: 3}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: to.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roads.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: to.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: to.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roads.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roads.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: waypoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roads.Array.data[0].to
+      value: 
+      objectReference: {fileID: 574686030}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6141115338576279855, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488513362710385083, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: debugInfo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798072535554590081, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_Name
+      value: Sixth
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_RootOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6488513362710385083, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
 --- !u!1 &1849777477
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,6 +1106,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1849777480}
   - component: {fileID: 1849777479}
+  - component: {fileID: 1849777484}
+  - component: {fileID: 1849777483}
+  - component: {fileID: 1849777482}
+  - component: {fileID: 1849777481}
   - component: {fileID: 1849777478}
   m_Layer: 0
   m_Name: City
@@ -601,11 +1153,11 @@ MonoBehaviour:
       TangentIn:
         x: -0
         y: -0
-        z: -2
+        z: -1
       TangentOut:
         x: 0
         y: 0
-        z: 2
+        z: 1
       Rotation:
         value:
           x: 0
@@ -613,17 +1165,17 @@ MonoBehaviour:
           z: 0
           w: 0.70710677
     - Position:
-        x: 20
+        x: 10
         y: 0
         z: 0
       TangentIn:
         x: -0
         y: -0
-        z: -2
+        z: -1
       TangentOut:
         x: 0
         y: 0
-        z: 2
+        z: 1
       Rotation:
         value:
           x: 0
@@ -636,63 +1188,63 @@ MonoBehaviour:
       m_DistanceToInterpolation:
       - Distance: 0
         T: 0
-      - Distance: 0.25568902
+      - Distance: 0.12784451
         T: 0.03448276
-      - Distance: 0.6043708
+      - Distance: 0.3021854
         T: 0.06896552
-      - Distance: 1.039157
+      - Distance: 0.5195785
         T: 0.10344828
-      - Distance: 1.5531591
+      - Distance: 0.77657956
         T: 0.13793103
-      - Distance: 2.1394892
+      - Distance: 1.0697446
         T: 0.1724138
-      - Distance: 2.7912583
+      - Distance: 1.3956292
         T: 0.20689656
-      - Distance: 3.5015783
+      - Distance: 1.7507892
         T: 0.2413793
-      - Distance: 4.2635612
+      - Distance: 2.1317806
         T: 0.27586207
-      - Distance: 5.0703177
+      - Distance: 2.5351589
         T: 0.31034482
-      - Distance: 5.914962
+      - Distance: 2.957481
         T: 0.3448276
-      - Distance: 6.7906017
+      - Distance: 3.3953009
         T: 0.37931034
-      - Distance: 7.6903524
+      - Distance: 3.8451762
         T: 0.41379312
-      - Distance: 8.607323
+      - Distance: 4.3036613
         T: 0.44827586
-      - Distance: 9.534626
+      - Distance: 4.767313
         T: 0.4827586
-      - Distance: 10.465374
+      - Distance: 5.232687
         T: 0.51724136
-      - Distance: 11.392677
+      - Distance: 5.6963387
         T: 0.55172414
-      - Distance: 12.3096485
+      - Distance: 6.1548243
         T: 0.5862069
-      - Distance: 13.209396
+      - Distance: 6.604698
         T: 0.62068963
-      - Distance: 14.085039
+      - Distance: 7.0425196
         T: 0.6551724
-      - Distance: 14.929682
+      - Distance: 7.464841
         T: 0.6896552
-      - Distance: 15.736438
+      - Distance: 7.868219
         T: 0.7241379
-      - Distance: 16.49842
+      - Distance: 8.24921
         T: 0.7586207
-      - Distance: 17.208742
+      - Distance: 8.604371
         T: 0.79310346
-      - Distance: 17.860512
+      - Distance: 8.930256
         T: 0.82758623
-      - Distance: 18.44684
+      - Distance: 9.22342
         T: 0.86206895
-      - Distance: 18.960842
+      - Distance: 9.480421
         T: 0.8965517
-      - Distance: 19.395628
+      - Distance: 9.697814
         T: 0.9310345
-      - Distance: 19.744312
+      - Distance: 9.872156
         T: 0.9655172
-      - Distance: 20
+      - Distance: 10
         T: 1
     - Mode: 0
       Tension: 0.5
@@ -703,59 +1255,233 @@ MonoBehaviour:
         T: 0.03448276
       - Distance: 0
         T: 0.06896552
-      - Distance: 0.0000019073486
+      - Distance: 0.0000009536743
         T: 0.10344828
-      - Distance: 0.0000038146973
+      - Distance: 0.0000019073486
         T: 0.13793103
-      - Distance: 0.0000038146973
+      - Distance: 0.0000019073486
         T: 0.1724138
-      - Distance: 0.0000038146973
+      - Distance: 0.0000019073486
         T: 0.20689656
-      - Distance: 0.000005722046
+      - Distance: 0.000002861023
         T: 0.2413793
-      - Distance: 0.000009536743
+      - Distance: 0.0000047683716
         T: 0.27586207
-      - Distance: 0.000011444092
+      - Distance: 0.000005722046
         T: 0.31034482
-      - Distance: 0.000011444092
+      - Distance: 0.000005722046
         T: 0.3448276
-      - Distance: 0.000011444092
+      - Distance: 0.000005722046
         T: 0.37931034
-      - Distance: 0.00001335144
+      - Distance: 0.00000667572
         T: 0.41379312
-      - Distance: 0.000015258789
+      - Distance: 0.0000076293945
         T: 0.44827586
-      - Distance: 0.000015258789
+      - Distance: 0.0000076293945
         T: 0.4827586
-      - Distance: 0.000015258789
+      - Distance: 0.0000076293945
         T: 0.51724136
-      - Distance: 0.000015258789
+      - Distance: 0.0000076293945
         T: 0.55172414
-      - Distance: 0.000015258789
+      - Distance: 0.0000076293945
         T: 0.5862069
-      - Distance: 0.000015258789
+      - Distance: 0.0000076293945
         T: 0.62068963
-      - Distance: 0.000015258789
+      - Distance: 0.0000076293945
         T: 0.6551724
-      - Distance: 0.000015258789
+      - Distance: 0.0000076293945
         T: 0.6896552
-      - Distance: 0.000015258789
+      - Distance: 0.0000076293945
         T: 0.7241379
-      - Distance: 0.000015258789
+      - Distance: 0.0000076293945
         T: 0.7586207
-      - Distance: 0.000015258789
+      - Distance: 0.0000076293945
         T: 0.79310346
-      - Distance: 0.000015258789
+      - Distance: 0.0000076293945
         T: 0.82758623
-      - Distance: 0.000015258789
+      - Distance: 0.0000076293945
         T: 0.86206895
-      - Distance: 0.000015258789
+      - Distance: 0.0000076293945
         T: 0.8965517
-      - Distance: 0.000015258789
+      - Distance: 0.0000076293945
         T: 0.9310345
-      - Distance: 0.000015258789
+      - Distance: 0.0000076293945
         T: 0.9655172
-      - Distance: 0.000015258789
+      - Distance: 0.0000076293945
+        T: 1
+    m_Closed: 0
+    m_IntData:
+      m_Data: []
+    m_FloatData:
+      m_Data: []
+    m_Float4Data:
+      m_Data: []
+    m_ObjectData:
+      m_Data: []
+  - m_EditModeType: 1
+    m_Knots:
+    - Position:
+        x: 10
+        y: 0
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -1.4142135
+      TangentOut:
+        x: 0
+        y: 0
+        z: 9.9301815
+      Rotation:
+        value:
+          x: 0
+          y: 0.70496726
+          z: 0
+          w: 0.7092399
+    - Position:
+        x: 20
+        y: 0
+        z: 10
+      TangentIn:
+        x: 0
+        y: 0
+        z: -9.930005
+      TangentOut:
+        x: 0
+        y: 0
+        z: 1.4142135
+      Rotation:
+        value:
+          x: 0
+          y: -0.0005035361
+          z: -0
+          w: 0.9999999
+    m_MetaData:
+    - Mode: 3
+      Tension: 0.5
+      m_DistanceToInterpolation:
+      - Distance: 0
+        T: 0
+      - Distance: 0.99252594
+        T: 0.03448276
+      - Distance: 1.9171975
+        T: 0.06896552
+      - Distance: 2.7764595
+        T: 0.10344828
+      - Distance: 3.572802
+        T: 0.13793103
+      - Distance: 4.308818
+        T: 0.1724138
+      - Distance: 4.9872384
+        T: 0.20689656
+      - Distance: 5.611025
+        T: 0.2413793
+      - Distance: 6.183469
+        T: 0.27586207
+      - Distance: 6.708332
+        T: 0.31034482
+      - Distance: 7.1900115
+        T: 0.3448276
+      - Distance: 7.633769
+        T: 0.37931034
+      - Distance: 8.045942
+        T: 0.41379312
+      - Distance: 8.434101
+        T: 0.44827586
+      - Distance: 8.807062
+        T: 0.4827586
+      - Distance: 9.174599
+        T: 0.51724136
+      - Distance: 9.546872
+        T: 0.55172414
+      - Distance: 9.933728
+        T: 0.5862069
+      - Distance: 10.3441
+        T: 0.62068963
+      - Distance: 10.785707
+        T: 0.6551724
+      - Distance: 11.265024
+        T: 0.6896552
+      - Distance: 11.787436
+        T: 0.7241379
+      - Distance: 12.357457
+        T: 0.7586207
+      - Distance: 12.978939
+        T: 0.79310346
+      - Distance: 13.65525
+        T: 0.82758623
+      - Distance: 14.389419
+        T: 0.86206895
+      - Distance: 15.184241
+        T: 0.8965517
+      - Distance: 16.042356
+        T: 0.9310345
+      - Distance: 16.966303
+        T: 0.9655172
+      - Distance: 17.958569
+        T: 1
+    - Mode: 3
+      Tension: 0.5
+      m_DistanceToInterpolation:
+      - Distance: -1
+        T: -1
+      - Distance: 0.10211282
+        T: 0.03448276
+      - Distance: 0.121445715
+        T: 0.06896552
+      - Distance: 0.17650422
+        T: 0.10344828
+      - Distance: 0.29756752
+        T: 0.13793103
+      - Distance: 0.47624803
+        T: 0.1724138
+      - Distance: 0.7041582
+        T: 0.20689656
+      - Distance: 0.97291136
+        T: 0.2413793
+      - Distance: 1.2741219
+        T: 0.27586207
+      - Distance: 1.5993993
+        T: 0.31034482
+      - Distance: 1.9403582
+        T: 0.3448276
+      - Distance: 2.2886107
+        T: 0.37931034
+      - Distance: 2.6357703
+        T: 0.41379312
+      - Distance: 2.9734485
+        T: 0.44827586
+      - Distance: 3.2932577
+        T: 0.4827586
+      - Distance: 3.5868132
+        T: 0.51724136
+      - Distance: 3.8457246
+        T: 0.55172414
+      - Distance: 4.061607
+        T: 0.5862069
+      - Distance: 4.226072
+        T: 0.62068963
+      - Distance: 4.330733
+        T: 0.6551724
+      - Distance: 4.3672013
+        T: 0.6896552
+      - Distance: 4.407312
+        T: 0.7241379
+      - Distance: 4.532388
+        T: 0.7586207
+      - Distance: 4.750818
+        T: 0.79310346
+      - Distance: 5.070988
+        T: 0.82758623
+      - Distance: 5.5012884
+        T: 0.86206895
+      - Distance: 6.050102
+        T: 0.8965517
+      - Distance: 6.7258205
+        T: 0.9310345
+      - Distance: 7.5368247
+        T: 0.9655172
+      - Distance: 8.49151
         T: 1
     m_Closed: 0
     m_IntData:
@@ -771,15 +1497,15 @@ MonoBehaviour:
     - Position:
         x: 20
         y: 0
-        z: 0
+        z: 10
       TangentIn:
         x: -0
         y: -0
-        z: -2
+        z: -1
       TangentOut:
         x: 0
         y: 0
-        z: 2
+        z: 1
       Rotation:
         value:
           x: 0
@@ -793,11 +1519,11 @@ MonoBehaviour:
       TangentIn:
         x: -0
         y: -0
-        z: -2
+        z: -1
       TangentOut:
         x: 0
         y: 0
-        z: 2
+        z: 1
       Rotation:
         value:
           x: 0
@@ -810,63 +1536,63 @@ MonoBehaviour:
       m_DistanceToInterpolation:
       - Distance: 0
         T: 0
-      - Distance: 0.25568902
+      - Distance: 0.12784481
         T: 0.03448276
-      - Distance: 0.60437083
+      - Distance: 0.30218506
         T: 0.06896552
-      - Distance: 1.039157
+      - Distance: 0.5195799
         T: 0.10344828
-      - Distance: 1.5531592
+      - Distance: 0.77657986
         T: 0.13793103
-      - Distance: 2.1394892
+      - Distance: 1.0697451
         T: 0.1724138
-      - Distance: 2.7912586
+      - Distance: 1.3956289
         T: 0.20689656
-      - Distance: 3.5015783
+      - Distance: 1.7507896
         T: 0.2413793
-      - Distance: 4.2635612
+      - Distance: 2.1317816
         T: 0.27586207
-      - Distance: 5.070318
+      - Distance: 2.535159
         T: 0.31034482
-      - Distance: 5.914962
+      - Distance: 2.9574814
         T: 0.3448276
-      - Distance: 6.7906017
+      - Distance: 3.3953009
         T: 0.37931034
-      - Distance: 7.6903524
+      - Distance: 3.8451757
         T: 0.41379312
-      - Distance: 8.607323
+      - Distance: 4.3036613
         T: 0.44827586
-      - Distance: 9.534626
+      - Distance: 4.767313
         T: 0.4827586
-      - Distance: 10.465374
+      - Distance: 5.232687
         T: 0.51724136
-      - Distance: 11.392677
+      - Distance: 5.6963396
         T: 0.55172414
-      - Distance: 12.3096485
+      - Distance: 6.1548233
         T: 0.5862069
-      - Distance: 13.209396
+      - Distance: 6.604698
         T: 0.62068963
-      - Distance: 14.085039
+      - Distance: 7.0425186
         T: 0.6551724
-      - Distance: 14.929682
+      - Distance: 7.464842
         T: 0.6896552
-      - Distance: 15.736438
+      - Distance: 7.8682194
         T: 0.7241379
-      - Distance: 16.49842
+      - Distance: 8.24921
         T: 0.7586207
-      - Distance: 17.208742
+      - Distance: 8.60437
         T: 0.79310346
-      - Distance: 17.860512
+      - Distance: 8.930256
         T: 0.82758623
-      - Distance: 18.44684
+      - Distance: 9.223419
         T: 0.86206895
-      - Distance: 18.960842
+      - Distance: 9.480421
         T: 0.8965517
-      - Distance: 19.395628
+      - Distance: 9.697815
         T: 0.9310345
-      - Distance: 19.744312
+      - Distance: 9.872156
         T: 0.9655172
-      - Distance: 20
+      - Distance: 10
         T: 1
     - Mode: 0
       Tension: 0.5
@@ -940,13 +1666,878 @@ MonoBehaviour:
       m_Data: []
     m_ObjectData:
       m_Data: []
+  - m_EditModeType: 1
+    m_Knots:
+    - Position:
+        x: 20
+        y: 0
+        z: 20
+      TangentIn:
+        x: 0
+        y: 0
+        z: -2.810805
+      TangentOut:
+        x: 0
+        y: 0
+        z: 19.420866
+      Rotation:
+        value:
+          x: 0
+          y: 0.023177171
+          z: 0
+          w: 0.9997314
+    - Position:
+        x: 39.75
+        y: 0
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -20.05049
+      TangentOut:
+        x: 0
+        y: 0
+        z: 2.810805
+      Rotation:
+        value:
+          x: 0
+          y: 0.7095711
+          z: 0
+          w: -0.70463383
+    m_MetaData:
+    - Mode: 3
+      Tension: 0.5
+      m_DistanceToInterpolation:
+      - Distance: 0
+        T: 0
+      - Distance: 1.8156106
+        T: 0.03448276
+      - Distance: 3.2998464
+        T: 0.06896552
+      - Distance: 4.548244
+        T: 0.10344828
+      - Distance: 5.678548
+        T: 0.13793103
+      - Distance: 6.810691
+        T: 0.1724138
+      - Distance: 8.035136
+        T: 0.20689656
+      - Distance: 9.400934
+        T: 0.2413793
+      - Distance: 10.9248295
+        T: 0.27586207
+      - Distance: 12.603761
+        T: 0.31034482
+      - Distance: 14.423368
+        T: 0.3448276
+      - Distance: 16.362823
+        T: 0.37931034
+      - Distance: 18.397528
+        T: 0.41379312
+      - Distance: 20.500637
+        T: 0.44827586
+      - Distance: 22.644026
+        T: 0.4827586
+      - Distance: 24.798895
+        T: 0.51724136
+      - Distance: 26.936237
+        T: 0.55172414
+      - Distance: 29.02731
+        T: 0.5862069
+      - Distance: 31.044088
+        T: 0.62068963
+      - Distance: 32.95998
+        T: 0.6551724
+      - Distance: 34.75076
+        T: 0.6896552
+      - Distance: 36.39632
+        T: 0.7241379
+      - Distance: 37.88363
+        T: 0.7586207
+      - Distance: 39.212116
+        T: 0.79310346
+      - Distance: 40.403137
+        T: 0.82758623
+      - Distance: 41.513176
+        T: 0.86206895
+      - Distance: 42.640984
+        T: 0.8965517
+      - Distance: 43.91011
+        T: 0.9310345
+      - Distance: 45.435963
+        T: 0.9655172
+      - Distance: 47.309807
+        T: 1
+    - Mode: 3
+      Tension: 0.5
+      m_DistanceToInterpolation:
+      - Distance: -1
+        T: -1
+      - Distance: 0.20183292
+        T: 0.03448276
+      - Distance: 0.2370587
+        T: 0.06896552
+      - Distance: 0.35152912
+        T: 0.10344828
+      - Distance: 0.59878474
+        T: 0.13793103
+      - Distance: 0.9619185
+        T: 0.1724138
+      - Distance: 1.4240155
+        T: 0.20689656
+      - Distance: 1.9681764
+        T: 0.2413793
+      - Distance: 2.5774784
+        T: 0.27586207
+      - Distance: 3.2350223
+        T: 0.31034482
+      - Distance: 3.9238896
+        T: 0.3448276
+      - Distance: 4.627169
+        T: 0.37931034
+      - Distance: 5.3279653
+        T: 0.41379312
+      - Distance: 6.009348
+        T: 0.44827586
+      - Distance: 6.6544213
+        T: 0.4827586
+      - Distance: 7.2462745
+        T: 0.51724136
+      - Distance: 7.767993
+        T: 0.55172414
+      - Distance: 8.202665
+        T: 0.5862069
+      - Distance: 8.5333805
+        T: 0.62068963
+      - Distance: 8.743239
+        T: 0.6551724
+      - Distance: 8.815328
+        T: 0.6896552
+      - Distance: 8.897929
+        T: 0.7241379
+      - Distance: 9.152124
+        T: 0.7586207
+      - Distance: 9.594823
+        T: 0.79310346
+      - Distance: 10.242933
+        T: 0.82758623
+      - Distance: 11.113369
+        T: 0.86206895
+      - Distance: 12.223038
+        T: 0.8965517
+      - Distance: 13.588847
+        T: 0.9310345
+      - Distance: 15.227712
+        T: 0.9655172
+      - Distance: 17.156538
+        T: 1
+    m_Closed: 0
+    m_IntData:
+      m_Data: []
+    m_FloatData:
+      m_Data: []
+    m_Float4Data:
+      m_Data: []
+    m_ObjectData:
+      m_Data: []
+  - m_EditModeType: 1
+    m_Knots:
+    - Position:
+        x: 20
+        y: 0
+        z: -10
+      TangentIn:
+        x: -0
+        y: -0
+        z: -1
+      TangentOut:
+        x: 0
+        y: 0
+        z: 1
+      Rotation:
+        value:
+          x: 0
+          y: 1
+          z: 0
+          w: 0
+    - Position:
+        x: 20
+        y: 0
+        z: -20
+      TangentIn:
+        x: -0
+        y: -0
+        z: -1
+      TangentOut:
+        x: 0
+        y: 0
+        z: 1
+      Rotation:
+        value:
+          x: 0
+          y: 1
+          z: 0
+          w: 0
+    m_MetaData:
+    - Mode: 0
+      Tension: 0.5
+      m_DistanceToInterpolation:
+      - Distance: 0
+        T: 0
+      - Distance: 0.12784481
+        T: 0.03448276
+      - Distance: 0.30218506
+        T: 0.06896552
+      - Distance: 0.5195799
+        T: 0.10344828
+      - Distance: 0.77657986
+        T: 0.13793103
+      - Distance: 1.0697451
+        T: 0.1724138
+      - Distance: 1.3956289
+        T: 0.20689656
+      - Distance: 1.7507896
+        T: 0.2413793
+      - Distance: 2.1317816
+        T: 0.27586207
+      - Distance: 2.535159
+        T: 0.31034482
+      - Distance: 2.9574814
+        T: 0.3448276
+      - Distance: 3.3953009
+        T: 0.37931034
+      - Distance: 3.8451757
+        T: 0.41379312
+      - Distance: 4.3036613
+        T: 0.44827586
+      - Distance: 4.767313
+        T: 0.4827586
+      - Distance: 5.232687
+        T: 0.51724136
+      - Distance: 5.6963396
+        T: 0.55172414
+      - Distance: 6.1548233
+        T: 0.5862069
+      - Distance: 6.604698
+        T: 0.62068963
+      - Distance: 7.0425186
+        T: 0.6551724
+      - Distance: 7.464842
+        T: 0.6896552
+      - Distance: 7.8682194
+        T: 0.7241379
+      - Distance: 8.24921
+        T: 0.7586207
+      - Distance: 8.60437
+        T: 0.79310346
+      - Distance: 8.930256
+        T: 0.82758623
+      - Distance: 9.223419
+        T: 0.86206895
+      - Distance: 9.480421
+        T: 0.8965517
+      - Distance: 9.697815
+        T: 0.9310345
+      - Distance: 9.872156
+        T: 0.9655172
+      - Distance: 10
+        T: 1
+    - Mode: 0
+      Tension: 0.5
+      m_DistanceToInterpolation:
+      - Distance: -1
+        T: -1
+      - Distance: 0
+        T: 0.03448276
+      - Distance: 0
+        T: 0.06896552
+      - Distance: 0.0000026973983
+        T: 0.10344828
+      - Distance: 0.0000053947965
+        T: 0.13793103
+      - Distance: 0.0000053947965
+        T: 0.1724138
+      - Distance: 0.0000053947965
+        T: 0.20689656
+      - Distance: 0.000008092195
+        T: 0.2413793
+      - Distance: 0.0000134869915
+        T: 0.27586207
+      - Distance: 0.00001618439
+        T: 0.31034482
+      - Distance: 0.00001618439
+        T: 0.3448276
+      - Distance: 0.00001618439
+        T: 0.37931034
+      - Distance: 0.000018881787
+        T: 0.41379312
+      - Distance: 0.000021579184
+        T: 0.44827586
+      - Distance: 0.000021579184
+        T: 0.4827586
+      - Distance: 0.000021579184
+        T: 0.51724136
+      - Distance: 0.000021579184
+        T: 0.55172414
+      - Distance: 0.000021579184
+        T: 0.5862069
+      - Distance: 0.000021579184
+        T: 0.62068963
+      - Distance: 0.000021579184
+        T: 0.6551724
+      - Distance: 0.000021579184
+        T: 0.6896552
+      - Distance: 0.000021579184
+        T: 0.7241379
+      - Distance: 0.000021579184
+        T: 0.7586207
+      - Distance: 0.000021579184
+        T: 0.79310346
+      - Distance: 0.000021579184
+        T: 0.82758623
+      - Distance: 0.000021579184
+        T: 0.86206895
+      - Distance: 0.000021579184
+        T: 0.8965517
+      - Distance: 0.000021579184
+        T: 0.9310345
+      - Distance: 0.000021579184
+        T: 0.9655172
+      - Distance: 0.000021579184
+        T: 1
+    m_Closed: 0
+    m_IntData:
+      m_Data: []
+    m_FloatData:
+      m_Data: []
+    m_Float4Data:
+      m_Data: []
+    m_ObjectData:
+      m_Data: []
+  - m_EditModeType: 1
+    m_Knots:
+    - Position:
+        x: 20
+        y: 0
+        z: -20
+      TangentIn:
+        x: 0
+        y: 0
+        z: -2.828427
+      TangentOut:
+        x: 0
+        y: 0
+        z: 18.629414
+      Rotation:
+        value:
+          x: 0
+          y: 0.99973965
+          z: 0
+          w: -0.022819348
+    - Position:
+        x: 0
+        y: 0
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -20.002247
+      TangentOut:
+        x: 0
+        y: 0
+        z: 2.828427
+      Rotation:
+        value:
+          x: 0
+          y: 0.7017841
+          z: 0
+          w: 0.71238977
+    m_MetaData:
+    - Mode: 3
+      Tension: 0.5
+      m_DistanceToInterpolation:
+      - Distance: 0
+        T: 0
+      - Distance: 1.7400576
+        T: 0.03448276
+      - Distance: 3.1631389
+        T: 0.06896552
+      - Distance: 4.367831
+        T: 0.10344828
+      - Distance: 5.473896
+        T: 0.13793103
+      - Distance: 6.598802
+        T: 0.1724138
+      - Distance: 7.8268404
+        T: 0.20689656
+      - Distance: 9.201159
+        T: 0.2413793
+      - Distance: 10.734636
+        T: 0.27586207
+      - Distance: 12.422039
+        T: 0.31034482
+      - Distance: 14.247866
+        T: 0.3448276
+      - Distance: 16.19074
+        T: 0.37931034
+      - Distance: 18.225859
+        T: 0.41379312
+      - Distance: 20.326374
+        T: 0.44827586
+      - Distance: 22.464277
+        T: 0.4827586
+      - Distance: 24.610958
+        T: 0.51724136
+      - Distance: 26.737661
+        T: 0.55172414
+      - Distance: 28.81592
+        T: 0.5862069
+      - Distance: 30.818016
+        T: 0.62068963
+      - Distance: 32.717667
+        T: 0.6551724
+      - Distance: 34.491
+        T: 0.6896552
+      - Distance: 36.118275
+        T: 0.7241379
+      - Distance: 37.5869
+        T: 0.7586207
+      - Distance: 38.896896
+        T: 0.79310346
+      - Distance: 40.070522
+        T: 0.82758623
+      - Distance: 41.165573
+        T: 0.86206895
+      - Distance: 42.28202
+        T: 0.8965517
+      - Distance: 43.543415
+        T: 0.9310345
+      - Distance: 45.063828
+        T: 0.9655172
+      - Distance: 46.93289
+        T: 1
+    - Mode: 3
+      Tension: 0.5
+      m_DistanceToInterpolation:
+      - Distance: -1
+        T: -1
+      - Distance: 0.20420405
+        T: 0.03448276
+      - Distance: 0.24281043
+        T: 0.06896552
+      - Distance: 0.35302258
+        T: 0.10344828
+      - Distance: 0.59527415
+        T: 0.13793103
+      - Distance: 0.9527863
+        T: 0.1724138
+      - Distance: 1.4087797
+        T: 0.20689656
+      - Distance: 1.946475
+        T: 0.2413793
+      - Distance: 2.549094
+        T: 0.27586207
+      - Distance: 3.1998568
+        T: 0.31034482
+      - Distance: 3.8819857
+        T: 0.3448276
+      - Distance: 4.578699
+        T: 0.37931034
+      - Distance: 5.273221
+        T: 0.41379312
+      - Distance: 5.948769
+        T: 0.44827586
+      - Distance: 6.588567
+        T: 0.4827586
+      - Distance: 7.1758347
+        T: 0.51724136
+      - Distance: 7.693792
+        T: 0.55172414
+      - Distance: 8.125662
+        T: 0.5862069
+      - Distance: 8.454662
+        T: 0.62068963
+      - Distance: 8.664021
+        T: 0.6551724
+      - Distance: 8.73695
+        T: 0.6896552
+      - Distance: 8.8172245
+        T: 0.7241379
+      - Distance: 9.067483
+        T: 0.7586207
+      - Distance: 9.504504
+        T: 0.79310346
+      - Distance: 10.145066
+        T: 0.82758623
+      - Distance: 11.005953
+        T: 0.86206895
+      - Distance: 12.103936
+        T: 0.8965517
+      - Distance: 13.455802
+        T: 0.9310345
+      - Distance: 15.078319
+        T: 0.9655172
+      - Distance: 16.98828
+        T: 1
+    m_Closed: 0
+    m_IntData:
+      m_Data: []
+    m_FloatData:
+      m_Data: []
+    m_Float4Data:
+      m_Data: []
+    m_ObjectData:
+      m_Data: []
+  - m_EditModeType: 1
+    m_Knots:
+    - Position:
+        x: 30
+        y: 0
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -1.4142135
+      TangentOut:
+        x: 0
+        y: 0
+        z: 10.190006
+      Rotation:
+        value:
+          x: 0
+          y: -0.7067597
+          z: -0
+          w: 0.7074537
+    - Position:
+        x: 20
+        y: 0
+        z: -10
+      TangentIn:
+        x: 0
+        y: 0
+        z: -10.110962
+      TangentOut:
+        x: 0
+        y: 0
+        z: 1.4142135
+      Rotation:
+        value:
+          x: 0
+          y: 0.9999761
+          z: 0
+          w: 0.0069233086
+    m_MetaData:
+    - Mode: 3
+      Tension: 0.5
+      m_DistanceToInterpolation:
+      - Distance: 0
+        T: 0
+      - Distance: 1.0180268
+        T: 0.03448276
+      - Distance: 1.9654932
+        T: 0.06896552
+      - Distance: 2.8449156
+        T: 0.10344828
+      - Distance: 3.658852
+        T: 0.13793103
+      - Distance: 4.409944
+        T: 0.1724138
+      - Distance: 5.100973
+        T: 0.20689656
+      - Distance: 5.734953
+        T: 0.2413793
+      - Distance: 6.3152175
+        T: 0.27586207
+      - Distance: 6.8455715
+        T: 0.31034482
+      - Distance: 7.3304825
+        T: 0.3448276
+      - Distance: 7.7753267
+        T: 0.37931034
+      - Distance: 8.186621
+        T: 0.41379312
+      - Distance: 8.572242
+        T: 0.44827586
+      - Distance: 8.941449
+        T: 0.4827586
+      - Distance: 9.3046
+        T: 0.51724136
+      - Distance: 9.672507
+        T: 0.55172414
+      - Distance: 10.055625
+        T: 0.5862069
+      - Distance: 10.463373
+        T: 0.62068963
+      - Distance: 10.903811
+        T: 0.6551724
+      - Distance: 11.38362
+        T: 0.6896552
+      - Distance: 11.908304
+        T: 0.7241379
+      - Distance: 12.482439
+        T: 0.7586207
+      - Distance: 13.109908
+        T: 0.79310346
+      - Distance: 13.794102
+        T: 0.82758623
+      - Distance: 14.538064
+        T: 0.86206895
+      - Distance: 15.344612
+        T: 0.8965517
+      - Distance: 16.216408
+        T: 0.9310345
+      - Distance: 17.156021
+        T: 0.9655172
+      - Distance: 18.16598
+        T: 1
+    - Mode: 3
+      Tension: 0.5
+      m_DistanceToInterpolation:
+      - Distance: -1
+        T: -1
+      - Distance: 0.101488285
+        T: 0.03448276
+      - Distance: 0.11903664
+        T: 0.06896552
+      - Distance: 0.17690542
+        T: 0.10344828
+      - Distance: 0.30167323
+        T: 0.13793103
+      - Distance: 0.4848144
+        T: 0.1724138
+      - Distance: 0.71781075
+        T: 0.20689656
+      - Distance: 0.9921414
+        T: 0.2413793
+      - Distance: 1.2992855
+        T: 0.27586207
+      - Distance: 1.6307181
+        T: 0.31034482
+      - Distance: 1.9779232
+        T: 0.3448276
+      - Distance: 2.332377
+        T: 0.37931034
+      - Distance: 2.6855593
+        T: 0.41379312
+      - Distance: 3.0289478
+        T: 0.44827586
+      - Distance: 3.3540218
+        T: 0.4827586
+      - Distance: 3.652261
+        T: 0.51724136
+      - Distance: 3.9151433
+        T: 0.55172414
+      - Distance: 4.134149
+        T: 0.5862069
+      - Distance: 4.3007555
+        T: 0.62068963
+      - Distance: 4.4064426
+        T: 0.6551724
+      - Distance: 4.442688
+        T: 0.6896552
+      - Distance: 4.4844046
+        T: 0.7241379
+      - Distance: 4.6126037
+        T: 0.7586207
+      - Distance: 4.8358073
+        T: 0.79310346
+      - Distance: 5.162536
+        T: 0.82758623
+      - Distance: 5.601313
+        T: 0.86206895
+      - Distance: 6.160656
+        T: 0.8965517
+      - Distance: 6.8490887
+        T: 0.9310345
+      - Distance: 7.675128
+        T: 0.9655172
+      - Distance: 8.647303
+        T: 1
+    m_Closed: 0
+    m_IntData:
+      m_Data: []
+    m_FloatData:
+      m_Data: []
+    m_Float4Data:
+      m_Data: []
+    m_ObjectData:
+      m_Data: []
+  - m_EditModeType: 1
+    m_Knots:
+    - Position:
+        x: 39.75
+        y: 0
+        z: 0
+      TangentIn:
+        x: -0
+        y: -0
+        z: -0.975
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.975
+      Rotation:
+        value:
+          x: 0
+          y: -0.70710677
+          z: -0
+          w: 0.70710677
+    - Position:
+        x: 30
+        y: 0
+        z: 0
+      TangentIn:
+        x: -0
+        y: -0
+        z: -0.975
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.975
+      Rotation:
+        value:
+          x: 0
+          y: -0.70710677
+          z: -0
+          w: 0.70710677
+    m_MetaData:
+    - Mode: 0
+      Tension: 0.5
+      m_DistanceToInterpolation:
+      - Distance: 0
+        T: 0
+      - Distance: 0.12465286
+        T: 0.03448276
+      - Distance: 0.29463196
+        T: 0.06896552
+      - Distance: 0.506588
+        T: 0.10344828
+      - Distance: 0.757164
+        T: 0.13793103
+      - Distance: 1.0430031
+        T: 0.1724138
+      - Distance: 1.3607407
+        T: 0.20689656
+      - Distance: 1.707016
+        T: 0.2413793
+      - Distance: 2.0784874
+        T: 0.27586207
+      - Distance: 2.4717789
+        T: 0.31034482
+      - Distance: 2.8835373
+        T: 0.3448276
+      - Distance: 3.3104172
+        T: 0.37931034
+      - Distance: 3.7490463
+        T: 0.41379312
+      - Distance: 4.196068
+        T: 0.44827586
+      - Distance: 4.6481323
+        T: 0.4827586
+      - Distance: 5.1018677
+        T: 0.51724136
+      - Distance: 5.5539284
+        T: 0.55172414
+      - Distance: 6.0009537
+        T: 0.5862069
+      - Distance: 6.439583
+        T: 0.62068963
+      - Distance: 6.866455
+        T: 0.6551724
+      - Distance: 7.278221
+        T: 0.6896552
+      - Distance: 7.6715126
+        T: 0.7241379
+      - Distance: 8.04298
+        T: 0.7586207
+      - Distance: 8.389261
+        T: 0.79310346
+      - Distance: 8.706999
+        T: 0.82758623
+      - Distance: 8.992834
+        T: 0.86206895
+      - Distance: 9.24341
+        T: 0.8965517
+      - Distance: 9.455368
+        T: 0.9310345
+      - Distance: 9.625351
+        T: 0.9655172
+      - Distance: 9.75
+        T: 1
+    - Mode: 0
+      Tension: 0.5
+      m_DistanceToInterpolation:
+      - Distance: -1
+        T: -1
+      - Distance: 0.0000019073486
+        T: 0.03448276
+      - Distance: 0.0000038146973
+        T: 0.06896552
+      - Distance: 0.0000038146973
+        T: 0.10344828
+      - Distance: 0.000005722046
+        T: 0.13793103
+      - Distance: 0.0000076293945
+        T: 0.1724138
+      - Distance: 0.0000076293945
+        T: 0.20689656
+      - Distance: 0.000009536743
+        T: 0.2413793
+      - Distance: 0.000011444092
+        T: 0.27586207
+      - Distance: 0.00001335144
+        T: 0.31034482
+      - Distance: 0.000015258789
+        T: 0.3448276
+      - Distance: 0.000017166138
+        T: 0.37931034
+      - Distance: 0.000019073486
+        T: 0.41379312
+      - Distance: 0.000020980835
+        T: 0.44827586
+      - Distance: 0.000020980835
+        T: 0.4827586
+      - Distance: 0.000022888184
+        T: 0.51724136
+      - Distance: 0.000022888184
+        T: 0.55172414
+      - Distance: 0.000022888184
+        T: 0.5862069
+      - Distance: 0.000022888184
+        T: 0.62068963
+      - Distance: 0.000022888184
+        T: 0.6551724
+      - Distance: 0.000022888184
+        T: 0.6896552
+      - Distance: 0.000022888184
+        T: 0.7241379
+      - Distance: 0.000022888184
+        T: 0.7586207
+      - Distance: 0.000022888184
+        T: 0.79310346
+      - Distance: 0.000022888184
+        T: 0.82758623
+      - Distance: 0.000022888184
+        T: 0.86206895
+      - Distance: 0.000022888184
+        T: 0.8965517
+      - Distance: 0.000022888184
+        T: 0.9310345
+      - Distance: 0.000022888184
+        T: 0.9655172
+      - Distance: 0.000022888184
+        T: 1
+    m_Closed: 0
+    m_IntData:
+      m_Data: []
+    m_FloatData:
+      m_Data: []
+    m_Float4Data:
+      m_Data: []
+    m_ObjectData:
+      m_Data: []
   m_Knots:
-    m_KnotsLink:
-    - Knots:
-      - Spline: 0
-        Knot: 1
-      - Spline: 1
-        Knot: 0
+    m_KnotsLink: []
 --- !u!114 &1849777479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -959,9 +2550,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bc137c361ffe294684c31c53f2fe663, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  splineContainer: {fileID: 1849777478}
   waypoints:
   - {fileID: 574686030}
   - {fileID: 2050093663}
+  - {fileID: 229634023}
+  - {fileID: 231196566}
+  - {fileID: 1314064014}
+  - {fileID: 20366997}
+  - {fileID: 78747834}
+  - {fileID: 1302028492}
+  carPrefab: {fileID: 1441401561945415126, guid: 85fdf9f3c1264de43a75b1b8c50b9a17, type: 3}
 --- !u!4 &1849777480
 Transform:
   m_ObjectHideFlags: 0
@@ -977,9 +2576,261 @@ Transform:
   - {fileID: 7421738003579084319}
   - {fileID: 2050093664}
   - {fileID: 229634024}
+  - {fileID: 231196568}
+  - {fileID: 1314064016}
+  - {fileID: 20366999}
+  - {fileID: 78747836}
+  - {fileID: 1302028494}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1849777481
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849777477}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1849777482
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849777477}
+  m_Mesh: {fileID: 1873547522}
+--- !u!114 &1849777483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849777477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73592790a629ef749a03a4951e247b13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resolution: 45
+  _width: 0.57
+  _splineSampler: {fileID: 1849777484}
+  _meshFilter: {fileID: 1849777482}
+--- !u!114 &1849777484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849777477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 768223f77f4b8de41b02d500ae9ae0a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _splineContainer: {fileID: 1849777478}
+  _time: 0.172
+  _width: 5
+  NumSplines: 8
+--- !u!43 &1873547522
+Mesh:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  serializedVersion: 11
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 0
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 0
+    localAABB:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_BonesAABB: []
+  m_VariableBoneCountWeights:
+    m_Data: 
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 
+  m_VertexData:
+    serializedVersion: 3
+    m_VertexCount: 0
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 0
+    _typelessdata: 
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_MeshUsageFlags: 0
+  m_CookingOptions: 30
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  m_MeshMetrics[0]: 1
+  m_MeshMetrics[1]: 1
+  m_MeshOptimizationFlags: 1
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
 --- !u!1001 &2050093662
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -998,7 +2849,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
       propertyPath: roads.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
       propertyPath: to.Array.data[0]
@@ -1021,6 +2872,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roads.Array.data[0].to
+      value: 
+      objectReference: {fileID: 229634023}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
       propertyPath: waypointList.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -1036,13 +2891,17 @@ PrefabInstance:
       propertyPath: waypointList.Array.data[0]
       value: 
       objectReference: {fileID: 229634023}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: waypointList.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6488513362710385083, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
       propertyPath: debugInfo
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6798072535554590081, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
       propertyPath: m_Name
-      value: Waypoint (1)
+      value: Second
       objectReference: {fileID: 0}
     - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
       propertyPath: m_RootOrder
@@ -1050,7 +2909,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1110,98 +2969,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
   m_PrefabInstance: {fileID: 2050093662}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1444323463647435421
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1441401561945415126, guid: 85fdf9f3c1264de43a75b1b8c50b9a17, type: 3}
-      propertyPath: m_Name
-      value: Car
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170233899994427754, guid: 85fdf9f3c1264de43a75b1b8c50b9a17, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170233899994427754, guid: 85fdf9f3c1264de43a75b1b8c50b9a17, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 8.998878
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170233899994427754, guid: 85fdf9f3c1264de43a75b1b8c50b9a17, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170233899994427754, guid: 85fdf9f3c1264de43a75b1b8c50b9a17, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.0000000066030523
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170233899994427754, guid: 85fdf9f3c1264de43a75b1b8c50b9a17, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170233899994427754, guid: 85fdf9f3c1264de43a75b1b8c50b9a17, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170233899994427754, guid: 85fdf9f3c1264de43a75b1b8c50b9a17, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170233899994427754, guid: 85fdf9f3c1264de43a75b1b8c50b9a17, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170233899994427754, guid: 85fdf9f3c1264de43a75b1b8c50b9a17, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170233899994427754, guid: 85fdf9f3c1264de43a75b1b8c50b9a17, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170233899994427754, guid: 85fdf9f3c1264de43a75b1b8c50b9a17, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1441401561945415126, guid: 85fdf9f3c1264de43a75b1b8c50b9a17, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1444323463647435425}
-  m_SourcePrefab: {fileID: 100100000, guid: 85fdf9f3c1264de43a75b1b8c50b9a17, type: 3}
---- !u!1 &1444323463647435422 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1441401561945415126, guid: 85fdf9f3c1264de43a75b1b8c50b9a17, type: 3}
-  m_PrefabInstance: {fileID: 1444323463647435421}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1444323463647435425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1444323463647435422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Target: {fileID: 1849777478}
-  m_PlayOnAwake: 1
-  m_LoopMode: 1
-  m_Method: 1
-  m_Duration: 8
-  m_MaxSpeed: 5
-  m_EasingMode: 0
-  m_AlignmentMode: 1
-  m_ObjectForwardAxis: 2
-  m_ObjectUpAxis: 1
-  m_StartOffset: 0
 --- !u!1001 &7421738003579084318
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1220,7 +2987,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
       propertyPath: roads.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
       propertyPath: to.Array.data[0]
@@ -1243,6 +3010,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roads.Array.data[0].to
+      value: 
+      objectReference: {fileID: 2050093663}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roads.Array.data[1].to
+      value: 
+      objectReference: {fileID: 229634023}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roads.Array.data[2].to
+      value: 
+      objectReference: {fileID: 231196566}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
       propertyPath: waypointList.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -1255,16 +3034,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roads.Array.data[1].index
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roads.Array.data[0].length
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: roads.Array.data[1].length
+      value: 22.360678
+      objectReference: {fileID: 0}
+    - target: {fileID: 843504127908801770, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
       propertyPath: waypointList.Array.data[0]
       value: 
       objectReference: {fileID: 2050093663}
+    - target: {fileID: 6141115338576279855, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6488513362710385083, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
       propertyPath: debugInfo
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6798072535554590081, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
       propertyPath: m_Name
-      value: Waypoint
+      value: First
       objectReference: {fileID: 0}
     - target: {fileID: 6852223138160978622, guid: 18cd9ebb838a48e4ca2384db6173e050, type: 3}
       propertyPath: m_RootOrder

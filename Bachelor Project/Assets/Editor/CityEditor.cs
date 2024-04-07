@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Splines;
@@ -10,31 +9,17 @@ public class CityEditor : Editor
     {
         base.OnInspectorGUI();
         City city = (City)target;
-        SplineContainer splineContainer = target.GetOrAddComponent<SplineContainer>();
+        SplineContainer splineContainer = city.splineContainer;
 
-        if (GUILayout.Button("Create Roads"))
+        if (GUILayout.Button("Generate Roads"))
         {
-            foreach (Waypoint waypoint in city.waypoints)
-            {
-                foreach (Waypoint to in waypoint.waypointList)
-                {
-                    Spline spline = splineContainer.AddSpline();
-
-                    BezierKnot[] knots = new BezierKnot[2];
-                    knots[0] = new BezierKnot(waypoint.transform.position - city.transform.position);
-                    knots[1] = new BezierKnot(to.transform.position - city.transform.position);
-                    spline.Knots = knots;
-                    spline.SetTangentMode(TangentMode.AutoSmooth);
-                }
-            }
+            city.GenerateRoads();
         }
-
         if (GUILayout.Button("Delete Roads"))
         {
-            foreach (Spline road in splineContainer.Splines)
-            {
-                splineContainer.RemoveSpline(road);
-            }
+            city.DeleteRoads();
         }
+
+
     }
 }

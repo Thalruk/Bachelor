@@ -115,6 +115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6852223138160978622}
   - component: {fileID: 843504127908801770}
+  - component: {fileID: 6141115338576279855}
   m_Layer: 0
   m_Name: Waypoint
   m_TagString: Untagged
@@ -136,7 +137,7 @@ Transform:
   m_Children:
   - {fileID: 6494487042840261982}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &843504127908801770
 MonoBehaviour:
@@ -150,6 +151,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b211cff689ea7fa4aaf79405f4d128cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints: []
   roads: []
-  road: {fileID: 3812409770003840063, guid: 0e3d941696bf5c646a0319fea11399db, type: 3}
+--- !u!65 &6141115338576279855
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6798072535554590081}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
+  m_Center: {x: 0, y: 1, z: 0}

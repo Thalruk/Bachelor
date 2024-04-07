@@ -3,10 +3,12 @@ using UnityEngine;
 
 public class Waypoint : MonoBehaviour
 {
-    public List<Waypoint> waypointList;
-
-    private void Awake()
+    public List<Road> roads;
+    private void OnTriggerEnter(Collider other)
     {
-        waypointList = new List<Waypoint>();
+        if (other.TryGetComponent<Car>(out var car))
+        {
+            car.HitWaypoint(City.Instance.splineContainer.Splines[Random.Range(roads[0].GetIndex(), roads[roads.Count - 1].GetIndex() + 1)]);
+        }
     }
 }
