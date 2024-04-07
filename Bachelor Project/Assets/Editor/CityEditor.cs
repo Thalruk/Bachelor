@@ -19,6 +19,11 @@ public class CityEditor : Editor
         {
             city.DeleteRoads();
         }
+        if (GUILayout.Button("Regenerate Roads"))
+        {
+            city.DeleteRoads();
+            city.GenerateRoads();
+        }
 
 
     }
