@@ -11,6 +11,11 @@ public class CityEditor : Editor
         City city = (City)target;
         SplineContainer splineContainer = city.splineContainer;
 
+
+        if (GUILayout.Button("Load Waypoints"))
+        {
+            city.LoadWaypoints();
+        }
         if (GUILayout.Button("Generate Roads"))
         {
             city.GenerateRoads();

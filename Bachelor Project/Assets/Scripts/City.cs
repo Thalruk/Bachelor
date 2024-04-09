@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Splines;
 
@@ -17,6 +18,7 @@ public class City : MonoBehaviour
     private void Awake()
     {
         splineContainer = GetComponent<SplineContainer>();
+
 
         if (Instance != null && Instance != this)
         {
@@ -47,6 +49,11 @@ public class City : MonoBehaviour
             car.currentSpline = splineContainer.Splines[0];
 
         }
+    }
+
+    public void LoadWaypoints()
+    {
+        waypoints = GetComponentsInChildren<Waypoint>().ToList<Waypoint>();
     }
 
     public void GenerateRoads()
