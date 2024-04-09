@@ -6,7 +6,7 @@ public class Waypoint : MonoBehaviour
     public List<Road> roads;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent<Car>(out var car))
+        if (other.TryGetComponent<Car>(out var car) && roads.Count != 0)
         {
             car.HitWaypoint(City.Instance.splineContainer.Splines[Random.Range(roads[0].GetIndex(), roads[roads.Count - 1].GetIndex() + 1)]);
         }
