@@ -6,5 +6,4 @@ public class CarData : ScriptableObject
     public string carName;
     [Range(0.7f, 1.5f)] public float reactionOffset;
     public float maxSpeed;
-
 }

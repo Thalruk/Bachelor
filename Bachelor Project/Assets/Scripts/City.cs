@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -10,15 +11,20 @@ public class City : MonoBehaviour
     public static City Instance;
     public SplineContainer splineContainer;
     public SplineRoad splineRoad;
+    public CityData cityData;
+
     public List<Waypoint> waypoints;
+    [SerializeField] private List<Waypoint> startPoints;
 
     public GameObject carPrefab;
-    public bool showHelp = true;
+    [SerializeField] private GameObject carHolder;
+
 
     private void Awake()
     {
         splineContainer = GetComponent<SplineContainer>();
 
+        startPoints = waypoints.FindAll(w => w.startPoint == true);
 
         if (Instance != null && Instance != this)
         {
@@ -30,14 +36,7 @@ public class City : MonoBehaviour
         }
 
         UpdateRoadData();
-
-        if (!showHelp)
-        {
-            foreach (var waypoint in waypoints)
-            {
-
-            }
-        }
+        StartCoroutine(SpawnCars());
     }
 
     private void Update()
@@ -51,6 +50,31 @@ public class City : MonoBehaviour
         }
     }
 
+    private IEnumerator SpawnCars()
+    {
+        for (int i = 0; i < cityData.maxCarAmount; i++)
+        {
+            RespawnCar();
+            yield return new WaitUntil(() =>
+            {
+                return startPoints.FindAll(w => w.GetCarAmount() == 0).Count() > 0;
+            });
+        }
+    }
+
+    public void RespawnCar()
+    {
+
+        List<Waypoint> possibleSpawnPositions = startPoints.FindAll(w => w.GetCarAmount() == 0);
+
+        if (possibleSpawnPositions.Count > 0)
+        {
+            Waypoint spawnPosition = possibleSpawnPositions[Random.Range(0, startPoints.Count - 1)];
+            GameObject car = Instantiate(carPrefab, spawnPosition.transform.position, Quaternion.identity, carHolder.transform);
+            car.GetComponent<Car>().currentSpline = splineContainer.Splines[spawnPosition.GetRoads()[0].GetIndex()];
+        }
+    }
+
     public void LoadWaypoints()
     {
         waypoints = GetComponentsInChildren<Waypoint>().ToList<Waypoint>();
@@ -60,7 +84,7 @@ public class City : MonoBehaviour
     {
         foreach (Waypoint waypoint in waypoints)
         {
-            foreach (Road road in waypoint.roads)
+            foreach (Road road in waypoint.GetRoads())
             {
                 Spline spline = splineContainer.AddSpline();
 
@@ -82,7 +106,7 @@ public class City : MonoBehaviour
 
         foreach (Waypoint waypoint in waypoints)
         {
-            foreach (Road road in waypoint.roads)
+            foreach (Road road in waypoint.GetRoads())
             {
 
                 road.SetLength(splineContainer.Splines[splineIndex].GetLength());
