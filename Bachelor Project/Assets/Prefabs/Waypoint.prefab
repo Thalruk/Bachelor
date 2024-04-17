@@ -45,6 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b211cff689ea7fa4aaf79405f4d128cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPoint: 0
+  endPoint: 0
+  carAmount: 0
   roads: []
 --- !u!65 &6141115338576279855
 BoxCollider:
@@ -65,5 +68,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.01, y: 1, z: 0.01}
   m_Center: {x: 0, y: 0.5, z: 0}

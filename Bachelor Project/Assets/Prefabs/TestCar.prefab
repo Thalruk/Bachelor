@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2577890460119257358}
   - component: {fileID: 1677500223932738699}
   m_Layer: 7
-  m_Name: Car
+  m_Name: TestCar
   m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,7 +48,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   power: 250
-  city: {fileID: 0}
+  carData: {fileID: 11400000, guid: d395532773d847646a4db9ceaac253e5, type: 2}
+  currentSpline:
+    m_EditModeType: 1
+    m_Knots: []
+    m_MetaData: []
+    m_Closed: 0
+    m_IntData:
+      m_Data: []
+    m_FloatData:
+      m_Data: []
+    m_Float4Data:
+      m_Data: []
+    m_ObjectData:
+      m_Data: []
 --- !u!54 &2577890460119257358
 Rigidbody:
   m_ObjectHideFlags: 0

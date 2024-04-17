@@ -36,7 +36,7 @@ public class City : MonoBehaviour
         }
 
         UpdateRoadData();
-        StartCoroutine(SpawnCars());
+        //StartCoroutine(SpawnCars());
     }
 
     private void Update()

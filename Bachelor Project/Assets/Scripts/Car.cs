@@ -6,6 +6,7 @@ using UnityEngine.Splines;
 public class Car : MonoBehaviour
 {
     [SerializeField] float power;
+    [SerializeField] CarData carData;
 
 
     private Rigidbody rb;
