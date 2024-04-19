@@ -7,7 +7,7 @@ public class Car : MonoBehaviour
 {
     [SerializeField] float power;
     [SerializeField] CarData carData;
-
+    public Waypoint nextWaypoint;
 
     private Rigidbody rb;
     public Spline currentSpline;
@@ -17,19 +17,36 @@ public class Car : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    private void Update()
+    {
+        if ((transform.position - nextWaypoint.transform.position).magnitude < 0.3f)
+        {
+            Debug.Log((transform.position - nextWaypoint.transform.position).magnitude);
+            Debug.Log(nextWaypoint.name);
+
+            if (nextWaypoint.GetRoads().Count != 0)
+            {
+                HitWaypoint(City.Instance.splineContainer.Splines[nextWaypoint.GetRoads()[0].GetIndex()]);
+                nextWaypoint = nextWaypoint.GetRoads()[0].GetWaypoint();
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+
+        }
+    }
+
     private void FixedUpdate()
     {
         var spline = new NativeSpline(currentSpline);
-        _ = SplineUtility.GetNearestPoint(spline, transform.position, out float3 nearest, out float t);
-
+        _ = SplineUtility.GetNearestPoint(spline, transform.position, out float3 nearest, out float t, SplineUtility.PickResolutionMax, 5);
         transform.position = nearest;
 
         Vector3 forward = Vector3.Normalize(spline.EvaluateTangent(t));
         Vector3 up = spline.EvaluateUpVector(t);
 
-        var remappedForward = new Vector3(0, 0, 1);
-        var remappedUp = new Vector3(0, 1, 0);
-        var axisRemapRotation = Quaternion.Inverse(Quaternion.LookRotation(remappedForward, remappedUp));
+        var axisRemapRotation = Quaternion.Inverse(Quaternion.LookRotation(Vector3.forward, Vector3.up));
 
         transform.rotation = Quaternion.LookRotation(forward, up) * axisRemapRotation;
 
@@ -62,5 +79,6 @@ public class Car : MonoBehaviour
     public void HitWaypoint(Spline road)
     {
         currentSpline = road;
+        Debug.Log("HITWAYPOINT " + name);
     }
 }

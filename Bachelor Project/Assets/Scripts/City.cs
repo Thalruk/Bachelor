@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -36,42 +35,16 @@ public class City : MonoBehaviour
         }
 
         UpdateRoadData();
-        //StartCoroutine(SpawnCars());
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            Car car = Instantiate(carPrefab, waypoints[0].transform.position, Quaternion.identity).GetComponent<Car>();
+            Car car = Instantiate(carPrefab, startPoints[0].transform.position, Quaternion.identity, carHolder.transform).GetComponent<Car>();
 
             car.currentSpline = splineContainer.Splines[0];
-
-        }
-    }
-
-    private IEnumerator SpawnCars()
-    {
-        for (int i = 0; i < cityData.maxCarAmount; i++)
-        {
-            RespawnCar();
-            yield return new WaitUntil(() =>
-            {
-                return startPoints.FindAll(w => w.GetCarAmount() == 0).Count() > 0;
-            });
-        }
-    }
-
-    public void RespawnCar()
-    {
-
-        List<Waypoint> possibleSpawnPositions = startPoints.FindAll(w => w.GetCarAmount() == 0);
-
-        if (possibleSpawnPositions.Count > 0)
-        {
-            Waypoint spawnPosition = possibleSpawnPositions[Random.Range(0, startPoints.Count - 1)];
-            GameObject car = Instantiate(carPrefab, spawnPosition.transform.position, Quaternion.identity, carHolder.transform);
-            car.GetComponent<Car>().currentSpline = splineContainer.Splines[spawnPosition.GetRoads()[0].GetIndex()];
+            car.nextWaypoint = startPoints[0].GetRoads()[0].GetWaypoint();
         }
     }
 

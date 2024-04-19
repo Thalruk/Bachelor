@@ -8,6 +8,11 @@ public class Road
     [SerializeField] private float length;
     [SerializeField] private int index;
 
+    public Waypoint GetWaypoint()
+    {
+        return to;
+    }
+
     public void SetLength(float length)
     {
         this.length = length;
