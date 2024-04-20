@@ -12,17 +12,19 @@ public class Car : MonoBehaviour
     private Rigidbody rb;
     public Spline currentSpline;
 
+    [Range(50, 140)]
+    [SerializeField] int maxSpeed = 50;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        rb.maxLinearVelocity = carData.maxSpeed;
     }
 
     private void Update()
     {
-        if ((transform.position - nextWaypoint.transform.position).magnitude < 0.3f)
+        if ((transform.position - nextWaypoint.transform.position).magnitude <= 0.1f)
         {
-            Debug.Log((transform.position - nextWaypoint.transform.position).magnitude);
-            Debug.Log(nextWaypoint.name);
 
             if (nextWaypoint.GetRoads().Count != 0)
             {
@@ -58,27 +60,29 @@ public class Car : MonoBehaviour
         }
 
         rb.velocity = rb.velocity.magnitude * engineForward;
+        Throttle(power);
 
-        if (Input.GetKey(KeyCode.W))
+        if (rb.velocity.magnitude > maxSpeed)
         {
-            Throttle(power);
+            rb.velocity = rb.velocity.normalized * maxSpeed;
         }
 
-        if (Input.GetKey(KeyCode.S))
-        {
-            Throttle(-power);
-        }
     }
 
     private void Throttle(float power)
     {
         Vector3 dir = power * transform.forward;
-        rb.AddForce(dir);
+        rb.AddForce(dir, ForceMode.Acceleration);
     }
 
     public void HitWaypoint(Spline road)
     {
         currentSpline = road;
         Debug.Log("HITWAYPOINT " + name);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(nextWaypoint.transform.position, 0.1f);
     }
 }

@@ -17,6 +17,7 @@ public class City : MonoBehaviour
 
     public GameObject carPrefab;
     [SerializeField] private GameObject carHolder;
+    [SerializeField] private bool isPaused = false;
 
 
     private void Awake()
@@ -45,6 +46,18 @@ public class City : MonoBehaviour
 
             car.currentSpline = splineContainer.Splines[0];
             car.nextWaypoint = startPoints[0].GetRoads()[0].GetWaypoint();
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            isPaused = !isPaused;
+            if (isPaused)
+            {
+                Time.timeScale = 0;
+            }
+            else
+            {
+                Time.timeScale = 1;
+            }
         }
     }
 
