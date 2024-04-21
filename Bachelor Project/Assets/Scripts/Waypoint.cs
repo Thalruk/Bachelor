@@ -11,4 +11,10 @@ public class Waypoint : MonoBehaviour
     {
         return roads;
     }
+
+    public Road GetRandomRoad()
+    {
+        System.Random random = new System.Random();
+        return roads[random.Next(roads.Count)];
+    }
 }

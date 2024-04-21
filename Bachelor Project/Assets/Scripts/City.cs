@@ -18,6 +18,7 @@ public class City : MonoBehaviour
     public GameObject carPrefab;
     [SerializeField] private GameObject carHolder;
     [SerializeField] private bool isPaused = false;
+    [SerializeField] private GameObject pausedPanel;
 
 
     private void Awake()
@@ -42,14 +43,18 @@ public class City : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            Car car = Instantiate(carPrefab, startPoints[0].transform.position, Quaternion.identity, carHolder.transform).GetComponent<Car>();
+            System.Random random = new();
+            Waypoint startPoint = startPoints[random.Next(startPoints.Count)];
+            Car car = Instantiate(carPrefab, startPoint.transform.position, Quaternion.identity, carHolder.transform).GetComponent<Car>();
 
-            car.currentSpline = splineContainer.Splines[0];
-            car.nextWaypoint = startPoints[0].GetRoads()[0].GetWaypoint();
+            car.currentSpline = splineContainer.Splines[startPoint.GetRandomRoad().GetIndex()];
+            car.nextWaypoint = startPoint.GetRandomRoad().GetWaypoint();
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             isPaused = !isPaused;
+            pausedPanel.SetActive(isPaused);
+
             if (isPaused)
             {
                 Time.timeScale = 0;
@@ -94,7 +99,6 @@ public class City : MonoBehaviour
         {
             foreach (Road road in waypoint.GetRoads())
             {
-
                 road.SetLength(splineContainer.Splines[splineIndex].GetLength());
                 road.SetIndex(splineIndex);
                 splineIndex++;

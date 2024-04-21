@@ -1,3 +1,4 @@
+using System;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Splines;
@@ -13,29 +14,44 @@ public class Car : MonoBehaviour
     public Spline currentSpline;
 
     [Range(50, 140)]
-    [SerializeField] int maxSpeed = 50;
+    [SerializeField] int maxSpeed;
+    private Ray frontRaycast;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        rb.maxLinearVelocity = carData.maxSpeed;
+        maxSpeed = UnityEngine.Random.Range(50, 100);
+        Debug.Log(maxSpeed);
+        frontRaycast = new Ray(transform.position, transform.forward);
+
+        rb.maxLinearVelocity = maxSpeed;
+
     }
 
     private void Update()
     {
-        if ((transform.position - nextWaypoint.transform.position).magnitude <= 0.1f)
+        if ((transform.position - nextWaypoint.transform.position).magnitude <= 0.3f)
         {
 
             if (nextWaypoint.GetRoads().Count != 0)
             {
-                HitWaypoint(City.Instance.splineContainer.Splines[nextWaypoint.GetRoads()[0].GetIndex()]);
-                nextWaypoint = nextWaypoint.GetRoads()[0].GetWaypoint();
+                Road nextRoad = nextWaypoint.GetRandomRoad();
+                HitWaypoint(City.Instance.splineContainer.Splines[nextRoad.GetIndex()]);
+                nextWaypoint = nextRoad.GetWaypoint();
             }
             else
             {
                 Destroy(gameObject);
             }
 
+        }
+
+        if (Physics.Raycast(frontRaycast, out RaycastHit hit, 10))
+        {
+            if (hit.collider.TryGetComponent(out Car car))
+            {
+
+            }
         }
     }
 
@@ -72,17 +88,17 @@ public class Car : MonoBehaviour
     private void Throttle(float power)
     {
         Vector3 dir = power * transform.forward;
-        rb.AddForce(dir, ForceMode.Acceleration);
+        rb.AddForce(dir, ForceMode.VelocityChange);
     }
 
     public void HitWaypoint(Spline road)
     {
         currentSpline = road;
-        Debug.Log("HITWAYPOINT " + name);
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(nextWaypoint.transform.position, 0.1f);
+        Gizmos.DrawRay(frontRaycast);
     }
 }
