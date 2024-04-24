@@ -1,4 +1,3 @@
-using System;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Splines;
@@ -10,29 +9,26 @@ public class Car : MonoBehaviour
     [SerializeField] CarData carData;
     public Waypoint nextWaypoint;
 
+    [SerializeField] int maxSpeed;
+    [SerializeField] LayerMask layerMask;
+    [SerializeField] private GameObject raySpawner;
+    private bool didRayHit = false;
+
     private Rigidbody rb;
     public Spline currentSpline;
 
-    [Range(50, 140)]
-    [SerializeField] int maxSpeed;
-    private Ray frontRaycast;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        maxSpeed = UnityEngine.Random.Range(50, 100);
-        Debug.Log(maxSpeed);
-        frontRaycast = new Ray(transform.position, transform.forward);
-
-        rb.maxLinearVelocity = maxSpeed;
-
+        maxSpeed = UnityEngine.Random.Range(30, 100);
     }
 
     private void Update()
     {
-        if ((transform.position - nextWaypoint.transform.position).magnitude <= 0.3f)
+        didRayHit = false;
+        if ((transform.position - nextWaypoint.transform.position).magnitude <= 0.5f)
         {
-
             if (nextWaypoint.GetRoads().Count != 0)
             {
                 Road nextRoad = nextWaypoint.GetRandomRoad();
@@ -43,52 +39,53 @@ public class Car : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-
         }
 
-        if (Physics.Raycast(frontRaycast, out RaycastHit hit, 10))
+        Ray ray = new Ray(raySpawner.transform.position, transform.forward);
+        if (Physics.Raycast(ray, out RaycastHit hit, 10, layerMask))
         {
-            if (hit.collider.TryGetComponent(out Car car))
-            {
+            didRayHit = true;
 
+            print("HIT");
+
+            if (hit.rigidbody.velocity.magnitude < rb.velocity.magnitude)
+            {
+                maxSpeed = hit.collider.GetComponent<Car>().maxSpeed;
             }
         }
+
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            maxSpeed = 10;
+        }
+
     }
 
     private void FixedUpdate()
     {
+
         var spline = new NativeSpline(currentSpline);
-        _ = SplineUtility.GetNearestPoint(spline, transform.position, out float3 nearest, out float t, SplineUtility.PickResolutionMax, 5);
+        SplineUtility.GetNearestPoint(spline, transform.position, out float3 nearest, out float t, SplineUtility.PickResolutionMax, 5);
         transform.position = nearest;
 
         Vector3 forward = Vector3.Normalize(spline.EvaluateTangent(t));
         Vector3 up = spline.EvaluateUpVector(t);
 
         var axisRemapRotation = Quaternion.Inverse(Quaternion.LookRotation(Vector3.forward, Vector3.up));
-
         transform.rotation = Quaternion.LookRotation(forward, up) * axisRemapRotation;
 
-        Vector3 engineForward = transform.forward;
+        rb.velocity = rb.velocity.magnitude * transform.forward;
 
-        if (Vector3.Dot(rb.velocity, transform.forward) < 0)
+        if (rb.velocity.magnitude < maxSpeed)
         {
-            engineForward *= -1;
+            rb.AddForce(transform.forward * power, ForceMode.VelocityChange);
         }
-
-        rb.velocity = rb.velocity.magnitude * engineForward;
-        Throttle(power);
 
         if (rb.velocity.magnitude > maxSpeed)
         {
-            rb.velocity = rb.velocity.normalized * maxSpeed;
+            rb.AddForce(-transform.forward * power * 3, ForceMode.VelocityChange);
         }
-
-    }
-
-    private void Throttle(float power)
-    {
-        Vector3 dir = power * transform.forward;
-        rb.AddForce(dir, ForceMode.VelocityChange);
     }
 
     public void HitWaypoint(Spline road)
@@ -99,6 +96,17 @@ public class Car : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(nextWaypoint.transform.position, 0.1f);
-        Gizmos.DrawRay(frontRaycast);
+
+        if (didRayHit)
+        {
+            Gizmos.color = Color.red;
+        }
+        else
+        {
+            Gizmos.color = Color.white;
+        }
+
+        Gizmos.DrawLine(transform.position, transform.position + transform.forward * 10);
+
     }
 }
