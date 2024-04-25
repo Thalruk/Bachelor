@@ -10,6 +10,7 @@ public class Car : MonoBehaviour
     public Waypoint nextWaypoint;
 
     [SerializeField] int maxSpeed;
+    [SerializeField] int currentMaxSpeed;
     [SerializeField] LayerMask layerMask;
     [SerializeField] private GameObject raySpawner;
     private bool didRayHit = false;
@@ -17,11 +18,11 @@ public class Car : MonoBehaviour
     private Rigidbody rb;
     public Spline currentSpline;
 
-
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         maxSpeed = UnityEngine.Random.Range(30, 100);
+        currentMaxSpeed = maxSpeed;
     }
 
     private void Update()
@@ -46,25 +47,46 @@ public class Car : MonoBehaviour
         {
             didRayHit = true;
 
-            print("HIT");
-
             if (hit.rigidbody.velocity.magnitude < rb.velocity.magnitude)
             {
-                maxSpeed = hit.collider.GetComponent<Car>().maxSpeed;
+                currentMaxSpeed = hit.collider.GetComponent<Car>().maxSpeed;
             }
         }
+        else
+        {
+            currentMaxSpeed = maxSpeed;
+        }
 
+        if (rb.velocity.magnitude <= 0.5f)
+        {
+            print("AAAAAA");
+        }
 
         if (Input.GetKeyDown(KeyCode.D))
         {
             maxSpeed = 10;
         }
+    }
 
+    void SpeedUp()
+    {
+        if (rb.velocity.magnitude < currentMaxSpeed - 5)
+        {
+            rb.AddForce(transform.forward * power, ForceMode.VelocityChange);
+            print("SPEED UP");
+        }
+    }
+    void SlownDown()
+    {
+        if (rb.velocity.magnitude > currentMaxSpeed + 5)
+        {
+            rb.AddForce(-transform.forward * power * 3, ForceMode.VelocityChange);
+            print("SLOW DOWN");
+        }
     }
 
     private void FixedUpdate()
     {
-
         var spline = new NativeSpline(currentSpline);
         SplineUtility.GetNearestPoint(spline, transform.position, out float3 nearest, out float t, SplineUtility.PickResolutionMax, 5);
         transform.position = nearest;
@@ -77,14 +99,14 @@ public class Car : MonoBehaviour
 
         rb.velocity = rb.velocity.magnitude * transform.forward;
 
-        if (rb.velocity.magnitude < maxSpeed)
+        if (rb.velocity.magnitude < currentMaxSpeed - 5)
         {
-            rb.AddForce(transform.forward * power, ForceMode.VelocityChange);
+            this.Invoke(nameof(SpeedUp), carData.reactionOffset);
         }
 
-        if (rb.velocity.magnitude > maxSpeed)
+        if (rb.velocity.magnitude > currentMaxSpeed + 5)
         {
-            rb.AddForce(-transform.forward * power * 3, ForceMode.VelocityChange);
+            this.Invoke(nameof(SlownDown), carData.reactionOffset);
         }
     }
 
