@@ -52,9 +52,10 @@ MonoBehaviour:
   carData: {fileID: 11400000, guid: d395532773d847646a4db9ceaac253e5, type: 2}
   nextWaypoint: {fileID: 0}
   maxSpeed: 0
+  currentMaxSpeed: 0
   layerMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 384
   raySpawner: {fileID: 5542786836085243259}
   currentSpline:
     m_EditModeType: 1

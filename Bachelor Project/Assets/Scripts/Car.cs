@@ -47,24 +47,25 @@ public class Car : MonoBehaviour
         {
             didRayHit = true;
 
-            if (hit.rigidbody.velocity.magnitude < rb.velocity.magnitude)
+            if (hit.collider.TryGetComponent(out Car otherCar))
             {
-                currentMaxSpeed = hit.collider.GetComponent<Car>().maxSpeed;
+                if (otherCar.rb.velocity.magnitude < rb.velocity.magnitude)
+                {
+                    currentMaxSpeed = hit.collider.GetComponent<Car>().maxSpeed;
+                }
+            }
+            if (hit.collider.TryGetComponent(out JunctionLights junctionLights))
+            {
+
+                if (junctionLights.GetLightState() == LightState.Red)
+                {
+                    currentMaxSpeed = 0;
+                }
             }
         }
         else
         {
             currentMaxSpeed = maxSpeed;
-        }
-
-        if (rb.velocity.magnitude <= 0.5f)
-        {
-            print("AAAAAA");
-        }
-
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            maxSpeed = 10;
         }
     }
 
@@ -73,7 +74,6 @@ public class Car : MonoBehaviour
         if (rb.velocity.magnitude < currentMaxSpeed - 5)
         {
             rb.AddForce(transform.forward * power, ForceMode.VelocityChange);
-            print("SPEED UP");
         }
     }
     void SlownDown()
@@ -81,7 +81,6 @@ public class Car : MonoBehaviour
         if (rb.velocity.magnitude > currentMaxSpeed + 5)
         {
             rb.AddForce(-transform.forward * power * 3, ForceMode.VelocityChange);
-            print("SLOW DOWN");
         }
     }
 
