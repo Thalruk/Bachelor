@@ -13,7 +13,6 @@ public class Car : MonoBehaviour
     [SerializeField] int currentMaxSpeed;
     [SerializeField] LayerMask layerMask;
     [SerializeField] private GameObject raySpawner;
-    private bool didRayHit = false;
 
     private Rigidbody rb;
     public Spline currentSpline;
@@ -27,12 +26,12 @@ public class Car : MonoBehaviour
 
     private void Update()
     {
-        didRayHit = false;
-        if ((transform.position - nextWaypoint.transform.position).magnitude <= 0.5f)
+        if (Vector3.Distance(transform.position, nextWaypoint.transform.position) <= 0.5f)
         {
             if (nextWaypoint.GetRoads().Count != 0)
             {
                 Road nextRoad = nextWaypoint.GetRandomRoad();
+                // if (nextRoad.to.GetRoads().Any(Road => Road.to == nextWaypoint))
                 HitWaypoint(City.Instance.splineContainer.Splines[nextRoad.GetIndex()]);
                 nextWaypoint = nextRoad.GetWaypoint();
             }
@@ -45,7 +44,6 @@ public class Car : MonoBehaviour
         Ray ray = new Ray(raySpawner.transform.position, transform.forward);
         if (Physics.Raycast(ray, out RaycastHit hit, 10, layerMask))
         {
-            didRayHit = true;
 
             if (hit.collider.TryGetComponent(out Car otherCar))
             {
@@ -57,7 +55,7 @@ public class Car : MonoBehaviour
             if (hit.collider.TryGetComponent(out JunctionLights junctionLights))
             {
 
-                if (junctionLights.GetLightState() == LightState.Red)
+                if (junctionLights.boxCollider.enabled && Vector3.Distance(transform.position, junctionLights.transform.position) < 0.5f)
                 {
                     currentMaxSpeed = 0;
                 }
@@ -71,24 +69,18 @@ public class Car : MonoBehaviour
 
     void SpeedUp()
     {
-        if (rb.velocity.magnitude < currentMaxSpeed - 5)
-        {
-            rb.AddForce(transform.forward * power, ForceMode.VelocityChange);
-        }
+        rb.AddForce(transform.forward * power, ForceMode.VelocityChange);
     }
     void SlownDown()
     {
-        if (rb.velocity.magnitude > currentMaxSpeed + 5)
-        {
-            rb.AddForce(-transform.forward * power * 3, ForceMode.VelocityChange);
-        }
+        rb.AddForce(-transform.forward * power, ForceMode.VelocityChange);
     }
 
     private void FixedUpdate()
     {
         var spline = new NativeSpline(currentSpline);
         SplineUtility.GetNearestPoint(spline, transform.position, out float3 nearest, out float t, SplineUtility.PickResolutionMax, 5);
-        transform.position = nearest;
+        transform.position = new Vector3(nearest.x, nearest.y, nearest.z);
 
         Vector3 forward = Vector3.Normalize(spline.EvaluateTangent(t));
         Vector3 up = spline.EvaluateUpVector(t);
@@ -98,12 +90,12 @@ public class Car : MonoBehaviour
 
         rb.velocity = rb.velocity.magnitude * transform.forward;
 
-        if (rb.velocity.magnitude < currentMaxSpeed - 5)
+        if (rb.velocity.magnitude < currentMaxSpeed - 5 && currentMaxSpeed != 0)
         {
             this.Invoke(nameof(SpeedUp), carData.reactionOffset);
         }
 
-        if (rb.velocity.magnitude > currentMaxSpeed + 5)
+        if (rb.velocity.magnitude > currentMaxSpeed + 5 && currentMaxSpeed != 0)
         {
             this.Invoke(nameof(SlownDown), carData.reactionOffset);
         }
@@ -117,17 +109,6 @@ public class Car : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(nextWaypoint.transform.position, 0.1f);
-
-        if (didRayHit)
-        {
-            Gizmos.color = Color.red;
-        }
-        else
-        {
-            Gizmos.color = Color.white;
-        }
-
         Gizmos.DrawLine(transform.position, transform.position + transform.forward * 10);
-
     }
 }

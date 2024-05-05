@@ -11,8 +11,6 @@ public enum LightState
 
 public class JunctionLights : MonoBehaviour
 {
-    private LightState lightState;
-
     [SerializeField] LightState startingLightState;
     [SerializeField] float greenLightDuration;
     [SerializeField] float yellowLightDuration;
@@ -70,10 +68,5 @@ public class JunctionLights : MonoBehaviour
         boxCollider.isTrigger = false;
         yield return new WaitForSecondsRealtime(redLightDuration);
         StartCoroutine(nameof(YellowLight), LightState.Red);
-    }
-
-    public LightState GetLightState()
-    {
-        return lightState;
     }
 }

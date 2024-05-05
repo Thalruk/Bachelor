@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d873658dcd9b8e4782268924b435e6e, type: 3}
   m_Name: Test City
   m_EditorClassIdentifier: 
-  maxCarAmount: 30
+  maxCarAmount: 10
   spawnOffset: 2
   showHelp: 0

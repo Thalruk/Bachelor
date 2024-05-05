@@ -17,8 +17,6 @@ public class City : MonoBehaviour
 
     public GameObject carPrefab;
     [SerializeField] private GameObject carHolder;
-    [SerializeField] private bool isPaused = false;
-    [SerializeField] private GameObject pausedPanel;
 
 
     private void Awake()
@@ -41,27 +39,27 @@ public class City : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        SpawnCar();
+    }
+
+    public void SpawnCar()
+    {
+        if (carHolder.transform.childCount < cityData.maxCarAmount)
         {
             System.Random random = new();
-            Waypoint startPoint = startPoints[random.Next(startPoints.Count)];
-            Car car = Instantiate(carPrefab, startPoint.transform.position, Quaternion.identity, carHolder.transform).GetComponent<Car>();
 
-            car.currentSpline = splineContainer.Splines[startPoint.GetRandomRoad().GetIndex()];
-            car.nextWaypoint = startPoint.GetRandomRoad().GetWaypoint();
-        }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            isPaused = !isPaused;
-            pausedPanel.SetActive(isPaused);
+            List<Waypoint> possibleStartPoints = startPoints.Where(w => w.canSpawn == true).ToList();
 
-            if (isPaused)
+            if (possibleStartPoints.Count > 0)
             {
-                Time.timeScale = 0;
-            }
-            else
-            {
-                Time.timeScale = 1;
+                Waypoint startPoint = possibleStartPoints[random.Next(possibleStartPoints.Count)];
+                StartCoroutine(startPoint.Spawn());
+                Car car = Instantiate(carPrefab, startPoint.transform.position, Quaternion.identity, carHolder.transform).GetComponent<Car>();
+
+                Road road = startPoint.GetRandomRoad();
+
+                car.currentSpline = splineContainer.Splines[road.GetIndex()];
+                car.nextWaypoint = road.GetWaypoint();
             }
         }
     }

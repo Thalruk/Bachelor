@@ -29,7 +29,5 @@ public class CityEditor : Editor
             city.DeleteRoads();
             city.GenerateRoads();
         }
-
-
     }
 }

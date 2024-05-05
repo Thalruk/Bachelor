@@ -6,15 +6,15 @@ using UnityEngine.Splines;
 [ExecuteInEditMode]
 public class SplineRoad : MonoBehaviour
 {
-    private List<Vector3> _vertsP1 = new();
-    private List<Vector3> _vertsP2 = new();
+    private List<Vector3> vertsP1 = new();
+    private List<Vector3> vertsP2 = new();
     Mesh mesh;
 
     [SerializeField] private int resolution;
-    [SerializeField] private float _width;
+    [SerializeField] private float width;
 
-    [SerializeField] private MeshFilter _meshFilter;
-    [SerializeField] private SplineContainer _splineContainer;
+    [SerializeField] private MeshFilter meshFilter;
+    [SerializeField] private SplineContainer splineContainer;
 
 
     public int NumSplines;
@@ -42,15 +42,15 @@ public class SplineRoad : MonoBehaviour
 
     private void Rebuild()
     {
-        NumSplines = _splineContainer.Splines.Count;
+        NumSplines = splineContainer.Splines.Count;
         GetVerts();
         BuildMesh();
     }
 
     private void GetVerts()
     {
-        _vertsP1 = new List<Vector3>();
-        _vertsP2 = new List<Vector3>();
+        vertsP1 = new List<Vector3>();
+        vertsP2 = new List<Vector3>();
 
         float step = 1f / (float)resolution;
         Vector3 p1;
@@ -61,19 +61,19 @@ public class SplineRoad : MonoBehaviour
             for (int i = 0; i < resolution; i++)
             {
                 float t = step * i;
-                SampleSplineWidth(j, t, _width, out p1, out p2);
-                _vertsP1.Add(p1);
-                _vertsP2.Add(p2);
+                SampleSplineWidth(j, t, width, out p1, out p2);
+                vertsP1.Add(p1);
+                vertsP2.Add(p2);
             }
-            SampleSplineWidth(j, 1f, _width, out p1, out p2);
-            _vertsP1.Add(p1);
-            _vertsP2.Add(p2);
+            SampleSplineWidth(j, 1f, width, out p1, out p2);
+            vertsP1.Add(p1);
+            vertsP2.Add(p2);
         }
     }
 
     internal void SampleSplineWidth(int j, float t, float width, out Vector3 p1, out Vector3 p2)
     {
-        _splineContainer.Evaluate(j, t, out position, out forward, out upVector3);
+        splineContainer.Evaluate(j, t, out position, out forward, out upVector3);
 
         float3 right = Vector3.Cross(forward, upVector3).normalized;
 
@@ -88,7 +88,7 @@ public class SplineRoad : MonoBehaviour
         List<int> tris = new List<int>();
         int offset = 0;
 
-        int length = _vertsP2.Count;
+        int length = vertsP2.Count;
 
         for (int currentSplineIndex = 0; currentSplineIndex < NumSplines; currentSplineIndex++)
         {
@@ -98,10 +98,10 @@ public class SplineRoad : MonoBehaviour
             for (int currentSplinePoint = 1; currentSplinePoint < resolution + 1; currentSplinePoint++)
             {
                 int vertoffset = splineOffset + currentSplinePoint;
-                Vector3 p1 = _vertsP1[vertoffset - 1];
-                Vector3 p2 = _vertsP2[vertoffset - 1];
-                Vector3 p3 = _vertsP1[vertoffset];
-                Vector3 p4 = _vertsP2[vertoffset];
+                Vector3 p1 = vertsP1[vertoffset - 1];
+                Vector3 p2 = vertsP2[vertoffset - 1];
+                Vector3 p3 = vertsP1[vertoffset];
+                Vector3 p4 = vertsP2[vertoffset];
 
                 offset = 4 * resolution * currentSplineIndex;
                 offset += 4 * (currentSplinePoint - 1);
@@ -121,7 +121,7 @@ public class SplineRoad : MonoBehaviour
         }
         mesh.SetVertices(verts);
         mesh.SetTriangles(tris, 0);
-        _meshFilter.mesh = mesh;
+        meshFilter.mesh = mesh;
     }
 
     public void DeleteMesh()
