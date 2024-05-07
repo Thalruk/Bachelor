@@ -131,12 +131,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingLightState: 1
-  greenLightDuration: 2
-  yellowLightDuration: 2
+  greenLightDuration: 1
+  yellowLightDuration: 0.5
   redLightDuration: 2
   junctionLight: {fileID: 6030868042329594043}
   boxCollider: {fileID: 0}
-  material: {fileID: 2100000, guid: b60452ce6c4c4fa4f8600a147811e3e6, type: 2}
 --- !u!65 &6524819233616783966
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -316,13 +315,13 @@ Light:
   m_GameObject: {fileID: 8103544205100846026}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 0
+  m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.5
-  m_Range: 10
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 9
+  m_Intensity: 3
+  m_Range: 5
+  m_SpotAngle: 120
+  m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0

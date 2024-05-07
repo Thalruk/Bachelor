@@ -20,7 +20,7 @@ public class Car : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        maxSpeed = UnityEngine.Random.Range(30, 100);
+        maxSpeed = UnityEngine.Random.Range(30, 70);
         currentMaxSpeed = maxSpeed;
     }
 
