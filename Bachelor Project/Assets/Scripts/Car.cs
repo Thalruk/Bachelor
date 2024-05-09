@@ -17,6 +17,9 @@ public class Car : MonoBehaviour
     private Rigidbody rb;
     public Spline currentSpline;
 
+    public bool isInTraffic = false;
+    public float trafficTime = 0.0f;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -49,13 +52,13 @@ public class Car : MonoBehaviour
             {
                 if (otherCar.rb.velocity.magnitude < rb.velocity.magnitude)
                 {
-                    currentMaxSpeed = hit.collider.GetComponent<Car>().maxSpeed;
+                    currentMaxSpeed = hit.collider.GetComponent<Car>().currentMaxSpeed;
                 }
             }
             if (hit.collider.TryGetComponent(out JunctionLights junctionLights))
             {
 
-                if (junctionLights.boxCollider.enabled && Vector3.Distance(transform.position, junctionLights.transform.position) < 0.5f)
+                if (junctionLights.boxCollider.enabled)
                 {
                     currentMaxSpeed = 0;
                 }
@@ -64,6 +67,20 @@ public class Car : MonoBehaviour
         else
         {
             currentMaxSpeed = maxSpeed;
+        }
+
+        if (currentMaxSpeed == 0)
+        {
+            isInTraffic = true;
+        }
+        else
+        {
+            isInTraffic = false;
+        }
+
+        if (isInTraffic)
+        {
+            trafficTime += Time.deltaTime;
         }
     }
 
@@ -104,11 +121,17 @@ public class Car : MonoBehaviour
     public void HitWaypoint(Spline road)
     {
         currentSpline = road;
+        trafficTime = 0;
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(nextWaypoint.transform.position, 0.1f);
         Gizmos.DrawLine(transform.position, transform.position + transform.forward * 10);
+    }
+
+    public float GetActualTrafficTime()
+    {
+        return trafficTime;
     }
 }

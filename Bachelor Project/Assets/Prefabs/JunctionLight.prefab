@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4867839865447796059}
   - component: {fileID: 2938608835311269042}
-  - component: {fileID: 6524819233616783966}
+  - component: {fileID: 6986249370384054834}
   m_Layer: 8
   m_Name: JunctionLight
   m_TagString: Untagged
@@ -135,8 +135,8 @@ MonoBehaviour:
   yellowLightDuration: 0.5
   redLightDuration: 2
   junctionLight: {fileID: 6030868042329594043}
-  boxCollider: {fileID: 0}
---- !u!65 &6524819233616783966
+  boxCollider: {fileID: 6986249370384054834}
+--- !u!65 &6986249370384054834
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -155,7 +155,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3, y: 1.5, z: 0.01}
+  m_Size: {x: 2.75, y: 1.5, z: 0.01}
   m_Center: {x: 0, y: 0.75, z: 0}
 --- !u!1 &3117356787850448848
 GameObject:

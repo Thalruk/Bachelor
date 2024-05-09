@@ -19,6 +19,9 @@ public class JunctionLights : MonoBehaviour
     [SerializeField] Light junctionLight;
     public BoxCollider boxCollider;
 
+    public int carNumber;
+    public float carTime;
+
     private void Awake()
     {
         boxCollider = GetComponent<BoxCollider>();
@@ -37,7 +40,6 @@ public class JunctionLights : MonoBehaviour
                 break;
         }
     }
-
     IEnumerator GreenLight()
     {
         junctionLight.color = Color.green;
@@ -68,5 +70,26 @@ public class JunctionLights : MonoBehaviour
         boxCollider.isTrigger = false;
         yield return new WaitForSecondsRealtime(redLightDuration);
         StartCoroutine(nameof(YellowLight), LightState.Red);
+    }
+
+    public float GetAverageTime()
+    {
+        if (carTime != 0)
+        {
+            return carNumber / carTime;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.TryGetComponent(out Car car))
+        {
+            carNumber++;
+            carTime += car.GetActualTrafficTime();
+        }
     }
 }
