@@ -5,7 +5,5 @@ public class CityData : ScriptableObject
 {
     [Range(1f, 50f)]
     public int maxCarAmount;
-    [Range(1f, 5f)]
-    public float spawnOffset;
     public bool showHelp = true;
 }

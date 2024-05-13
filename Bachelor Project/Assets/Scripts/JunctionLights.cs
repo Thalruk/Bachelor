@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public enum LightState
@@ -18,6 +20,7 @@ public class JunctionLights : MonoBehaviour
 
     [SerializeField] Light junctionLight;
     public BoxCollider boxCollider;
+    public TextMeshProUGUI text;
 
     public int carNumber;
     public float carTime;
@@ -72,11 +75,12 @@ public class JunctionLights : MonoBehaviour
         StartCoroutine(nameof(YellowLight), LightState.Red);
     }
 
-    public float GetAverageTime()
+    public double GetAverageTime()
     {
-        if (carTime != 0)
+        //obiac do 2 miejsca po przecinku
+        if (carNumber != 0)
         {
-            return carNumber / carTime;
+            return Math.Round(carTime / carNumber, 2);
         }
         else
         {
@@ -90,6 +94,8 @@ public class JunctionLights : MonoBehaviour
         {
             carNumber++;
             carTime += car.GetActualTrafficTime();
+            car.Invoke(nameof(car.ResetActualTrafficTime), 0.1f);
         }
+        text.text = GetAverageTime().ToString();
     }
 }

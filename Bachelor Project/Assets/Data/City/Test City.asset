@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: Test City
   m_EditorClassIdentifier: 
   maxCarAmount: 10
-  spawnOffset: 2
   showHelp: 0

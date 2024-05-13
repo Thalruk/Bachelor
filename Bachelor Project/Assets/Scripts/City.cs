@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -17,6 +18,9 @@ public class City : MonoBehaviour
 
     public GameObject carPrefab;
     [SerializeField] private GameObject carHolder;
+    [SerializeField] public int carAmount;
+    [SerializeField] private GameObject junctionLightHolder;
+    [SerializeField] public double averageJunctionWaitingTime;
 
 
     private void Awake()
@@ -41,6 +45,14 @@ public class City : MonoBehaviour
     private void Update()
     {
         SpawnCar();
+        carAmount = carHolder.transform.childCount;
+        int amount = junctionLightHolder.transform.childCount;
+        averageJunctionWaitingTime = 0;
+        foreach (Transform t in junctionLightHolder.transform)
+        {
+            averageJunctionWaitingTime += t.GetComponent<JunctionLights>().GetAverageTime();
+        }
+        averageJunctionWaitingTime = Math.Round(averageJunctionWaitingTime / amount, 2);
     }
 
     public void SpawnCar()

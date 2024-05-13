@@ -47,20 +47,24 @@ public class Car : MonoBehaviour
         Ray ray = new Ray(raySpawner.transform.position, transform.forward);
         if (Physics.Raycast(ray, out RaycastHit hit, 10, layerMask))
         {
-
-            if (hit.collider.TryGetComponent(out Car otherCar))
+            if (hit.collider.TryGetComponent(out Car otherCar) && Vector3.Distance(transform.position, otherCar.transform.position) < 4)
             {
-                if (otherCar.rb.velocity.magnitude < rb.velocity.magnitude)
+                if (otherCar.currentMaxSpeed < currentMaxSpeed)
                 {
-                    currentMaxSpeed = hit.collider.GetComponent<Car>().currentMaxSpeed;
+                    currentMaxSpeed = otherCar.currentMaxSpeed;
                 }
             }
-            if (hit.collider.TryGetComponent(out JunctionLights junctionLights))
+            if (hit.collider.TryGetComponent(out JunctionLights junctionLights) && Vector3.Distance(transform.position, junctionLights.transform.position) < 3)
             {
 
-                if (junctionLights.boxCollider.enabled)
+                if (junctionLights.boxCollider.isTrigger == false)
                 {
+
                     currentMaxSpeed = 0;
+                }
+                else
+                {
+                    currentMaxSpeed = maxSpeed;
                 }
             }
         }
@@ -88,15 +92,10 @@ public class Car : MonoBehaviour
     {
         rb.AddForce(transform.forward * power, ForceMode.VelocityChange);
     }
-    void SlownDown()
-    {
-        rb.AddForce(-transform.forward * power, ForceMode.VelocityChange);
-    }
-
     private void FixedUpdate()
     {
         var spline = new NativeSpline(currentSpline);
-        SplineUtility.GetNearestPoint(spline, transform.position, out float3 nearest, out float t, SplineUtility.PickResolutionMax, 5);
+        SplineUtility.GetNearestPoint(spline, transform.position, out float3 nearest, out float t, SplineUtility.PickResolutionMax, SplineUtility.PickResolutionMax);
         transform.position = new Vector3(nearest.x, nearest.y, nearest.z);
 
         Vector3 forward = Vector3.Normalize(spline.EvaluateTangent(t));
@@ -107,14 +106,17 @@ public class Car : MonoBehaviour
 
         rb.velocity = rb.velocity.magnitude * transform.forward;
 
-        if (rb.velocity.magnitude < currentMaxSpeed - 5 && currentMaxSpeed != 0)
+
+
+        if (rb.velocity.magnitude < currentMaxSpeed)
         {
             this.Invoke(nameof(SpeedUp), carData.reactionOffset);
         }
 
-        if (rb.velocity.magnitude > currentMaxSpeed + 5 && currentMaxSpeed != 0)
+        if (rb.velocity.magnitude > currentMaxSpeed)
         {
-            this.Invoke(nameof(SlownDown), carData.reactionOffset);
+            rb.velocity = rb.velocity.normalized * currentMaxSpeed;
+
         }
     }
 
@@ -124,14 +126,14 @@ public class Car : MonoBehaviour
         trafficTime = 0;
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(nextWaypoint.transform.position, 0.1f);
-        Gizmos.DrawLine(transform.position, transform.position + transform.forward * 10);
-    }
-
     public float GetActualTrafficTime()
     {
         return trafficTime;
+    }
+
+    internal void ResetActualTrafficTime()
+    {
+        trafficTime = 0;
+        isInTraffic = false;
     }
 }
