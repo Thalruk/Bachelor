@@ -34,7 +34,6 @@ public class Car : MonoBehaviour
             if (nextWaypoint.GetRoads().Count != 0)
             {
                 Road nextRoad = nextWaypoint.GetRandomRoad();
-                // if (nextRoad.to.GetRoads().Any(Road => Road.to == nextWaypoint))
                 HitWaypoint(City.Instance.splineContainer.Splines[nextRoad.GetIndex()]);
                 nextWaypoint = nextRoad.GetWaypoint();
             }
