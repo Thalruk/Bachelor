@@ -45,4 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startPoint: 0
+  spawnCooldown: 999.99
+  canSpawn: 0
   roads: []
