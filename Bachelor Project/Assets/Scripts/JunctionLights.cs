@@ -77,7 +77,6 @@ public class JunctionLights : MonoBehaviour
 
     public double GetAverageTime()
     {
-        //obiac do 2 miejsca po przecinku
         if (carNumber != 0)
         {
             return Math.Round(carTime / carNumber, 2);

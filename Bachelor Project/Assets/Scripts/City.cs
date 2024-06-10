@@ -25,7 +25,6 @@ public class City : MonoBehaviour
 
     private void Awake()
     {
-        Time.timeScale = 0.2f;
         splineContainer = GetComponent<SplineContainer>();
 
         startPoints = waypoints.FindAll(w => w.startPoint == true);

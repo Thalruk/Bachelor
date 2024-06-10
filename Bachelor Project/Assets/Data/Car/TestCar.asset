@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bf4c4c146c1c774ead2aca42734c0d9, type: 3}
   m_Name: TestCar
   m_EditorClassIdentifier: 
-  carName: AAAAAAAAAAAAAAA
+  carName: TestCar
   reactionOffset: 0
-  maxSpeed: 50
